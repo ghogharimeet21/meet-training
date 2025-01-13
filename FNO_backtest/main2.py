@@ -4,12 +4,13 @@ import os
 
 
 entry_time = "11:30:00"
-exit_time = "15:30:00"
+exit_time = "13:30:00"
 action = "BUY"
 symbol = "NIFTY"
 date_range = ["08032023", "10032023"]
 strike_shift = 0
-
+target = float(10)
+stop_loss = float(5)
 
 def takeClosest(num,collection):
     return min(collection,key=lambda x:abs(float(x)-num))
@@ -162,33 +163,69 @@ def strat_backtest(avilable_paths: list, call_or_put: str, spot_price_symbol: st
             # print("Tatal rows match", totalrows)
 
 
-            all_pnl_data = []
+            all_data = []
             if call_or_put == "CE":
                 for row in call:
                     if row["Symbol"] == finalSymbol:
-                        all_pnl_data.append(row)
+                        all_data.append(row)
             
             elif call_or_put == "PE":
                 for row in put:
                     if row["Symbol"] == finalSymbol:
-                        all_pnl_data.append(row)
+                        all_data.append(row)
 
-            for data in all_pnl_data:
+            # print(all_data)
+
+            for data in all_data:
+                # print(data)
                 if data["Time"] == entry_time:
-                    entry_price = data["Open"]
-                if data["Time"] == exit_time:
-                    exit_price = data["Open"]
-            print("Entry Price", entry_price, ",", "Exit Price", exit_price)
+                    entry_price = float(data["Open"])
+                    target_price = entry_price + target if action == "BUY" else entry_price - target
+                    stop_loss_price = entry_price - target if action == "BUY" else entry_price + target
 
-            PNL = None
-            if action == "BUY":
-                PNL = round(float(exit_price) - float(entry_price), 2)
-            elif action == "SELL":
-                PNL = round(float(entry_price) - float(exit_price), 2)
 
-            print(f"For {action} P&L is {PNL}")
+                elif data["Time"] == exit_time:
+                    exit_price = float(data["Open"])
+                    exit_reason = "Normal Exit..."
+                
+                else:
 
-            
+                    High_price = float(data["High"])
+                    Low_price = float(data["Low"])
+
+                    lage_exit_time = data["Time"]
+
+                    if action == "BUY":
+
+                        if High_price >= target_price:
+                            exit_time = lage_exit_time
+                            exit_price = High_price
+                            exit_reason = "Target Hitt"
+                            pnl = round(High_price - entry_price, 2)
+                            break
+                        elif Low_price <= stop_loss_price:
+                            exit_time = lage_exit_time
+                            exit_price = Low_price
+                            exit_reason = "Stop Loss Hitt"
+                            pnl = round(Low_price - entry_price, 2)
+                            break
+                    
+                    if action == "SELL":
+
+                        if High_price >= stop_loss_price:
+                            exit_time = lage_exit_time
+                            exit_price = High_price
+                            exit_reason = "Stop Loss Hitt"
+                            pnl = round(entry_price - High_price, 2)
+                            break
+                        elif Low_price <= target_price:
+                            exit_time = lage_exit_time
+                            exit_price = Low_price
+                            exit_reason = "Target Hitt"
+                            pnl = round(entry_price - Low_price, 2)
+                            break
+        print(f"Entry Time = {entry_time}, Exit Time = {exit_time}, Entry Price = {entry_price}, Exit Price = {exit_price}, P&L = {pnl}, Exit Reason = {exit_reason}")
+
 
 
 

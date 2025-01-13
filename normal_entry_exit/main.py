@@ -6,7 +6,7 @@ import os
 entry_time = 33300
 exit_time = 55500
 action = "SELL"
-symbol = ["bn25dec2450500ce",""]
+symbol = "sbin"
 date_range = ["240603", "240605"]
 target = 15
 stop_loss = 5
@@ -31,7 +31,7 @@ def find_all_path(symbol=symbol, date_range: list = date_range):
     for date in avilable_dates:
         date = datetime.strftime(date, "%y%m%d")
         avilable_dates_d.append(date)
-        path = f"./normal_entry_exit/dataset/{symbol}{date}.csv"
+        path = f"./dataset/{symbol}{date}.csv"
         avilable_paths.append(path)
 
     return avilable_paths, avilable_dates_d
@@ -39,7 +39,8 @@ def find_all_path(symbol=symbol, date_range: list = date_range):
 
 all_paths, all_dates = find_all_path(symbol=symbol, date_range=date_range)
 
-
+# print(all_paths)
+# print(all_dates)
 
 final_result = {}
 
@@ -55,7 +56,6 @@ for path, date in zip(all_paths, all_dates):
         for line in lines[1:]:
             line = line.strip().split(",")
             if date == line[2]:
-
                 if date not in final_result:
                     final_result[date] = {
                         "entry_time": entry_time,
@@ -67,7 +67,6 @@ for path, date in zip(all_paths, all_dates):
                         "target_price": None,
                         "stoploss_price": None,
                     }
-
 
                 if (int(line[1])==entry_time):
                     entry_price = float(line[4])
@@ -102,7 +101,7 @@ for path, date in zip(all_paths, all_dates):
                             final_result[date]["exit_reason"] = "Stop loass Hitt"
                             final_result[date]["pnl"] = round(low_price - entry_price, 2)                    
                             break
-                    if action == "SELL":
+                    elif action == "SELL":
 
                         if (high_price >= final_result[date]["stoploss_price"]):
                             final_result[date]["exit_time"] = lage_exit_time
