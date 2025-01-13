@@ -12,10 +12,16 @@ strike_shift = 0
 target = float(5)
 stop_loss = float(5)
 
-def takeClosest(num,collection):
-    return min(collection,key=lambda x:abs(float(x)-num))
+def takeClosest(target,numList):
+    """
+    return Nearest number from given list to given target
+    """
+    return min(numList,key=lambda x:abs(float(x)-target))
 
 def get_smallest_expiry(all_expiry):
+    """
+    return smallest date in a given list of dates
+    """
     dateobjs = []
     for date in all_expiry:
         # print("---------", date, type(date), "---------------")
@@ -26,7 +32,7 @@ def get_smallest_expiry(all_expiry):
     return nearestDate
     ...
 
-def get_avilable_dates(date_range: list)->list:
+def get_avilable_dates(date_range: list) -> list:
     """
     Return Date and Path List According to specified Date Range...[/start_date_path, ....... , /end_date_path]
     """
