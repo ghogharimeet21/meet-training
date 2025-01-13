@@ -179,19 +179,24 @@ def strat_backtest(avilable_paths: list, call_or_put: str, spot_price_symbol: st
                     result["target_price"] = target_price
                     result["target_stop_loss"] = target_stop_loss
 
-                elif data["Time"] == exit_time:
-                    result["exit_price"] = data["Open"]
-                    result["exit_reason"] = "Normal Exit"
-                
-                else:
+                    if exit_time == data["Time"]:
+                        result["exit_price"] = float(data["Open"])
+                        result["exit_reason"] = "Normal Exit"
+                        result["P&L"] = result["exit_price"] - result["entry_price"] if action == "BUY" else result["entry_price"] - result["exit_price"]
 
-                    high_price = float(data["High"])
-                    low_price = float(data["Low"])
-                    if result["entry_price"] != None:
-                        entry_price = float(result["entry_price"])
+                    else:
 
-                        if high_price >= target_price:
-                            print("got it")
+                        high = float(data["High"])
+                        low = float(data["Low"])
+
+                        if (result["target_price"] != None) and (result["target_stop_loss"] != None):
+
+                            if action == "BUY":
+
+                                if high >= result["target_price"]:
+                                    result["exit_price"] = high
+                                elif low <= result["target_stop_loss"]:
+                                    result["exit_price"] = low
                             
             
             print(result)
