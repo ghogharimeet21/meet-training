@@ -67,7 +67,6 @@ for path, date in zip(all_paths, all_dates):
                         "target_price": None,
                         "stoploss_price": None,
                     }
-
                 if (int(line[1])==entry_time):
                     entry_price = float(line[4])
                     target_price = entry_price+target if action == "BUY" else entry_price-target

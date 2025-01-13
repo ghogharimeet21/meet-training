@@ -3,13 +3,13 @@ import os
 
 
 
-entry_time = "11:30:00"
-exit_time = "13:30:00"
+entry_time = "12:30:00"
+exit_time = "14:30:00"
 action = "BUY"
 symbol = "NIFTY"
 date_range = ["08032023", "10032023"]
 strike_shift = 0
-target = float(10)
+target = float(5)
 stop_loss = float(5)
 
 def takeClosest(num,collection):
@@ -158,21 +158,47 @@ def strat_backtest(avilable_paths: list, call_or_put: str, spot_price_symbol: st
                     if row["Symbol"] == finalSymbol:
                         all_data.append(row)
 
+            result = {
+                "entry_time": entry_time,
+                "entry_price":None,
+                "exit_time": exit_time,
+                "exit_price": None,
+                "P&L": None,
+                "exit_reason": None,
+                "target_price": None,
+                "target_stop_loss": None
+            }
 
             for data in all_data:
-                # print(data)
-                time = data["Time"]
-                openp = float(data["Open"])
-                highp = float(data["High"])
-                lowp = float(data["Low"])
-                closep = float(data["Close"])
+                
+                if entry_time == data["Time"]:
+                    result["entry_price"] = float(data["Open"])
 
-                if entry_time == time:
-                    entry_price = openp
-                    
+                    target_price =  float(result["entry_price"] + target if action == "BUY" else result["entry_price"] - target)
+                    target_stop_loss = float(result["entry_price"] - stop_loss if action == "BUY" else result["entry_price"] + stop_loss)
+                    result["target_price"] = target_price
+                    result["target_stop_loss"] = target_stop_loss
+
+                elif data["Time"] == exit_time:
+                    result["exit_price"] = data["Open"]
+                    result["exit_reason"] = "Normal Exit"
+                
+                else:
+
+                    high_price = float(data["High"])
+                    low_price = float(data["Low"])
+                    if result["entry_price"] != None:
+                        entry_price = float(result["entry_price"])
+
+                        if high_price >= target_price:
+                            print("got it")
+                            
+            
+            print(result)
 
 
 
 
 
-strat_backtest(all_paths, "CE", "NIFTY-I", "BUY")
+
+strat_backtest(all_paths, "PE", "NIFTY-I", "BUY")
