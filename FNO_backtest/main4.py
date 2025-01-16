@@ -2,14 +2,14 @@ from datetime import datetime, timedelta
 import os
 
 
-entry_time = "9:30:00"
-exit_time = "14:30:00"
+entry_time = "11:30:00"
+exit_time = "15:30:00"
 action = "BUY"
 symbol = "NIFTY"
 date_range = ["08032023", "10032023"]
 strike_shift = 0
-target = float(5)
-stop_loss = float(2)
+target = float(10)
+stop_loss = float(5)
 
 def take_closest(target, num_list):
     """Return the closest number from the given list to the target."""
