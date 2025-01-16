@@ -2,14 +2,14 @@ from datetime import datetime, timedelta
 import os
 
 
-entry_time = "12:30:00"
+entry_time = "9:30:00"
 exit_time = "14:30:00"
 action = "BUY"
 symbol = "NIFTY"
 date_range = ["08032023", "10032023"]
 strike_shift = 0
-target = float(2)
-stop_loss = float(5)
+target = float(5)
+stop_loss = float(2)
 
 def take_closest(target, num_list):
     """Return the closest number from the given list to the target."""
@@ -49,65 +49,47 @@ def calculate_pnl(relevant_data, entry_time, action, target, stop_loss):
         "stop_loss_price": None
     }
 
-    # Sort data by time
-    # relevant_data = sorted(relevant_data, key=lambda x: x["Time"])
-    # for data in relevant_data:
-    #     print(data)
-
-    # Find entry price
-    entry_found = False
-    for row in relevant_data:
-        if row["Time"] == entry_time:
-            entry_price = float(row["Open"])
-            result["entry_price"] = entry_price
-
-            if action == "BUY":
-                result["target_price"] = entry_price + target
-                result["stop_loss_price"] = entry_price - stop_loss
-            elif action == "SELL":
-                result["target_price"] = entry_price - target
-                result["stop_loss_price"] = entry_price + stop_loss
-
-            entry_found = True
-            break
-
-    # If entry price is not found, return with an error
-    if not entry_found:
-        print("Error: Entry time not found in data!")
-        return result
-
-    # Check for exit conditions
-    # for data in relevant_data:
-    #     print("ROW", data)
-    
     for row in relevant_data:
         high = float(row["High"])
         low = float(row["Low"])
         time = row["Time"]
 
+        if row["Time"] == entry_time:
+            entry_price = float(row["Open"])
+            result["entry_price"] = entry_price
+
+            if action == "BUY":
+                result["target_price"] = round(float(entry_price + target), 2)
+                result["stop_loss_price"] = round(float(entry_price - stop_loss), 2)
+                continue
+            elif action == "SELL":
+                result["target_price"] = round(float(entry_price - target), 2)
+                result["stop_loss_price"] = round(float(entry_price + stop_loss), 2)
+                continue
+            
+
+        if (result["target_price"] == None) and (result["stop_loss_price"] == None):
+            continue
+
 
         if action == "BUY":
             if high >= result["target_price"]:
-                # print("Time =======", time)
                 result["exit_price"] = high
                 result["exit_time"] = time
                 result["exit_reason"] = "Target Hit"
                 break
             elif low <= result["stop_loss_price"]:
-                print("Exit Time =======", time)
                 result["exit_price"] = low
                 result["exit_time"] = time
                 result["exit_reason"] = "Stop-Loss Hit"
                 break
         elif action == "SELL":
             if low <= result["target_price"]:
-                # print("Time =======", time)
                 result["exit_price"] = low
                 result["exit_time"] = time
                 result["exit_reason"] = "Target Hit"
                 break
             elif high >= result["stop_loss_price"]:
-                # print("Time =======", time)
                 result["exit_price"] = high
                 result["exit_time"] = time
                 result["exit_reason"] = "Stop-Loss Hit"
@@ -116,9 +98,9 @@ def calculate_pnl(relevant_data, entry_time, action, target, stop_loss):
     # Calculate P&L
     if result["exit_price"] is not None:
         if action == "BUY":
-            result["P&L"] = result["exit_price"] - result["entry_price"]
+            result["P&L"] = round(result["exit_price"] - result["entry_price"], 2)
         elif action == "SELL":
-            result["P&L"] = result["entry_price"] - result["exit_price"]
+            result["P&L"] = round(result["entry_price"] - result["exit_price"], 2)
 
     return result
 
@@ -145,28 +127,21 @@ def strat_backtest(available_paths, call_or_put, spot_price_symbol, action):
                     spot_price_rows.append({header[i]: values[i] for i in range(len(header))})
                 elif call_or_put == "CE" and values[1].endswith("CE"):
                     call.append({header[i]: values[i] for i in range(len(header))})
-                    # all_expiry.append([row["Symbol"].replace(symbol, "").replace(call_or_put, "")[:7] for row in call])
                 elif call_or_put == "PE" and values[1].endswith("PE"):
                     put.append({header[i]: values[i] for i in range(len(header))})
-                    # all_expiry.append([row["Symbol"].replace(symbol, "").replace(call_or_put, "")[:7] for row in put])
 
             # extract all expiries from a symbol
             if call_or_put == "CE":
                 for row in call:
                     exp = row["Symbol"].replace(symbol, "").replace(call_or_put, "")[:7]
                     row["expiry"] = exp
+                    all_expiry.append(row["expiry"])
             elif call_or_put == "PE":
                 for row in put:
                     exp = row["Symbol"].replace(symbol, "").replace(call_or_put, "")[:7]
                     row["expiry"] = exp
+                    all_expiry.append(row["expiry"])
 
-            # seprate expiry for a sorting and get nearest
-            if call_or_put == "CE":
-                for row in call:
-                    all_expiry.append(row["expiry"])
-            elif call_or_put == "PE":
-                for row in put:
-                    all_expiry.append(row["expiry"])
 
             smallest_expiry = get_smallest_expiry(all_expiry)
             print("Nearest expiry =", smallest_expiry)
@@ -176,6 +151,7 @@ def strat_backtest(available_paths, call_or_put, spot_price_symbol, action):
             for row in spot_price_rows:
                 if row["Time"] == entry_time:
                     spot_price = float(row["Open"])
+                    print("Spot_price =", spot_price)
                     break
 
             if spot_price is None:
@@ -189,9 +165,6 @@ def strat_backtest(available_paths, call_or_put, spot_price_symbol, action):
             final_symbol = f"{symbol}{smallest_expiry}{int(closest_strike)}{call_or_put}"
 
             relevant_data = [row for row in relevant_rows if row["Symbol"] == final_symbol]
-
-            # for row in relevant_data:
-            #     print(row)
 
             result = calculate_pnl(relevant_data, entry_time, action, target, stop_loss)
             print(f"Results for {final_symbol}: {result}")
