@@ -1,14 +1,14 @@
 from datetime import datetime, timedelta
 import os
 
-# Configuration variables
+
 entry_time = "12:30:00"
-exit_time = "14:30:00"  # Default exit time if no target or stop-loss is hit
+exit_time = "14:30:00"
 action = "BUY"
 symbol = "NIFTY"
 date_range = ["08032023", "10032023"]
 strike_shift = 0
-target = float(5)
+target = float(2)
 stop_loss = float(5)
 
 # Helper Functions
@@ -35,12 +35,11 @@ def get_all_paths(available_dates):
     """Generate file paths for all dates."""
     return [f"./dataset/{symbol}_JF_FNO_{date}.csv" for date in available_dates]
 
-# Main Calculation Function
+
 def calculate_pnl(all_data, entry_time, action, target, stop_loss):
     """
     Calculate P&L for a given symbol based on target and stop-loss.
     """
-    # Initialize the result dictionary
     result = {
         "entry_time": entry_time,
         "entry_price": None,
@@ -52,8 +51,8 @@ def calculate_pnl(all_data, entry_time, action, target, stop_loss):
         "stop_loss_price": None
     }
 
-    # Sort data by time to process in chronological order
-    all_data = sorted(all_data, key=lambda x: x["Time"])
+    # Sort data by time
+    # all_data = sorted(all_data, key=lambda x: x["Time"])
 
     # Find entry price
     entry_found = False
@@ -78,31 +77,34 @@ def calculate_pnl(all_data, entry_time, action, target, stop_loss):
         return result
 
     # Check for exit conditions
+    # for data in all_data:
+    #     print("ROW", data)
+    
     for row in all_data:
         high = float(row["High"])
         low = float(row["Low"])
         time = row["Time"]
 
-        # Check target or stop-loss conditions based on action
+
         if action == "BUY":
             if high >= result["target_price"]:
-                result["exit_price"] = result["target_price"]
+                result["exit_price"] = high
                 result["exit_time"] = time
                 result["exit_reason"] = "Target Hit"
                 break
             if low <= result["stop_loss_price"]:
-                result["exit_price"] = result["stop_loss_price"]
+                result["exit_price"] = low
                 result["exit_time"] = time
                 result["exit_reason"] = "Stop-Loss Hit"
                 break
         elif action == "SELL":
             if low <= result["target_price"]:
-                result["exit_price"] = result["target_price"]
+                result["exit_price"] = low
                 result["exit_time"] = time
                 result["exit_reason"] = "Target Hit"
                 break
             if high >= result["stop_loss_price"]:
-                result["exit_price"] = result["stop_loss_price"]
+                result["exit_price"] = high
                 result["exit_time"] = time
                 result["exit_reason"] = "Stop-Loss Hit"
                 break
@@ -116,7 +118,7 @@ def calculate_pnl(all_data, entry_time, action, target, stop_loss):
 
     return result
 
-# Backtesting Logic
+
 def strat_backtest(available_paths, call_or_put, spot_price_symbol, action):
     for path in available_paths:
         if not os.path.exists(path):
@@ -127,7 +129,7 @@ def strat_backtest(available_paths, call_or_put, spot_price_symbol, action):
             lines = file.readlines()
             header = lines[0].strip().split(",")
 
-            # Parse data
+
             spot_price_rows = []
             call = []
             put = []
@@ -150,6 +152,7 @@ def strat_backtest(available_paths, call_or_put, spot_price_symbol, action):
             for row in spot_price_rows:
                 if row["Time"] == entry_time:
                     spot_price = float(row["Open"])
+                    print("Spot Price =", spot_price)
                     break
 
             if spot_price is None:
@@ -172,4 +175,4 @@ def strat_backtest(available_paths, call_or_put, spot_price_symbol, action):
 # Main Execution
 available_dates = get_available_dates(date_range)
 available_paths = get_all_paths(available_dates)
-strat_backtest(available_paths, "PE", "NIFTY-I", action)
+strat_backtest(available_paths, "CE", "NIFTY-I", action)
