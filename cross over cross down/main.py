@@ -40,38 +40,41 @@ for path in paths:
             values = line.strip().split(",")
             row_dict = {header[i]: values[i] for i in range(len(header))}
             # print(row_dict)
+            date = row_dict["date"]
+            # file_data[date] = row_dict
             file_data.append(row_dict)
+        print(file_data)
 
+def sma_finder(prices, sma, datafile: list):
+    moving_averages = []
+
+    i = 0
+    while i < len(prices) - sma + 1:
+        
+        window = prices[i : i + sma]
+        window_average = round(sum(window) / sma, 2)
+        moving_averages.append(window_average)
+
+        i += 1
+
+    x= 0
+    for data in file_data:
+        if datafile.index(data) in list(range(sma)):
+            continue
+            ...
+        data[str(sma)+"sma"] = moving_averages[x]
+        x += 1
+
+    return moving_averages
 
 
 # calculate moving avrage
-previus_price = None
-prices = []
-for row in file_data:
-    open_price = row["open"]
-    previus_price = open_price
-    prices.append(float(open_price))
+def add_sma(smaone: float, smatwo: float, file_datas: list):
+    prices = []
+    for row in file_datas:
+        open_price = row["open"]
+        prices.append(float(open_price))
 
-moving_averages = []
 
-i = 0
-while i < len(prices) - sma + 1:
-    
-    window = prices[i : i + sma]
 
-    window_average = round(sum(window) / sma, 2)
-
-    moving_averages.append(window_average)
-
-    i += 1
-
-x= 0
-for data in file_data:
-    if file_data.index(data) == 0:
-        continue
         ...
-    data["sma"] = moving_averages[x]
-    x += 1
-    ...
-
-print(file_data)
