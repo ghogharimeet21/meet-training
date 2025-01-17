@@ -132,6 +132,15 @@ venv.bak/
 .spyderproject
 .spyproject
 
+# Ignore all .log files
+*.log
+
+# Ignore a specific file
+/D:/meet/cross over cross down/x.ipynb/
+
+# Ignore files in a folder
+/D:/meet/cross over cross down/x.ipynb/
+
 # Rope project settings
 .ropeproject
 

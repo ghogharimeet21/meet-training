@@ -174,4 +174,4 @@ def strat_backtest(available_paths, call_or_put, spot_price_symbol, action):
 available_dates = get_available_dates(date_range)
 available_paths = get_all_paths(available_dates)
 
-strat_backtest(available_paths, "PE", "NIFTY-I", action)
+strat_backtest(available_paths, "CE", "NIFTY-I", action)
