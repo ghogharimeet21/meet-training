@@ -1,11 +1,9 @@
 from datetime import datetime, timedelta
 import os
 
-
-sma = 2
-
+sma_windows = [2, 4]
 symbol = "sbin"
-date_range = ["240604", "240606"]
+date_range = ["240605", "240606"]
 
 def get_available_dates(date_range):
     """Generate a list of dates between a given range."""
@@ -19,62 +17,56 @@ def get_available_dates(date_range):
 
 def get_all_paths(available_dates):
     """Generate file paths for all dates."""
-    return [f"./dataset/{symbol}{date}.csv" for date in available_dates]
+    return [f"./cross over cross down/dataset/{symbol}{date}.csv" for date in available_dates]
 
 
 dates = get_available_dates(date_range)
 paths = get_all_paths(dates)
 
 
-file_data = []
-for path in paths:
-    if not os.path.exists(path):
-        continue
-
-    with open(path, "r") as file:
-        lines = file.readlines()
-        header = lines[0].strip().split(",")
-        # ['', 'time', 'date', 'symbol', 'open', 'high', 'low', 'close']
-
-        for line in lines[1:]:
-            values = line.strip().split(",")
-            row_dict = {header[i]: values[i] for i in range(len(header))}
-            # print(row_dict)
-            date = row_dict["date"]
-            # file_data[date] = row_dict
-            file_data.append(row_dict)
-        print(file_data)
-
-def sma_finder(prices, sma, datafile: list):
-    moving_averages = []
-
-    i = 0
-    while i < len(prices) - sma + 1:
-        
-        window = prices[i : i + sma]
-        window_average = round(sum(window) / sma, 2)
-        moving_averages.append(window_average)
-
-        i += 1
-
-    x= 0
-    for data in file_data:
-        if datafile.index(data) in list(range(sma)):
+def load_data(paths):
+    """Load data from all available paths."""
+    file_data = []
+    for path in paths:
+        if not os.path.exists(path):
             continue
-            ...
-        data[str(sma)+"sma"] = moving_averages[x]
-        x += 1
+        
+        with open(path, "r") as file:
+            lines = file.readlines()
+            header = lines[0].strip().split(",")
+            for line in lines[1:]:
+                values = line.strip().split(",")
+                row_dict = {header[i]: values[i] for i in range(len(header))}
+                file_data.append(row_dict)
+    return file_data
 
+def calculate_sma(prices, window):
+    """Calculate SMA for a given list of prices and window size."""
+    moving_averages = []
+    for i in range(len(prices) - window + 1):
+        window_avg = round(sum(prices[i:i + window]) / window, 2)
+        moving_averages.append(window_avg)
     return moving_averages
 
 
-# calculate moving avrage
-def add_sma(smaone: float, smatwo: float, file_datas: list):
-    prices = []
-    for row in file_datas:
-        open_price = row["open"]
-        prices.append(float(open_price))
+def add_sma_to_data(file_data, sma_windows):
+    """Add SMA values to the dataset dynamically."""
+    prices = [float(row["open"]) for row in file_data]
+    for sma in sma_windows:
+        sma_values = calculate_sma(prices, sma)
+        for i, row in enumerate(file_data):
+            if i >= sma - 1:
+                row[f"{sma}_sma"] = sma_values[i - (sma - 1)]
+            else:
+                row[f"{sma}_sma"] = None
+    return file_data
 
 
 
-        ...
+file_data = load_data(paths)
+
+file_data_with_sma = add_sma_to_data(file_data, sma_windows)
+
+
+for row in file_data_with_sma:
+    print(row)
