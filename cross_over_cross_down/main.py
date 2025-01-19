@@ -17,9 +17,14 @@ def get_available_dates(date_range):
 
 def get_all_paths(available_dates):
     """Generate file paths for all dates."""
-    cwd = os.getcwd()
-    
-    return [f"{os.getcwd()}/dataset/{symbol}{date}.csv" for date in available_dates]
+    # cwd = os.getcwd()
+    # directiry_list = os.listdir(cwd)
+    # workin = None
+    # for directory in directiry_list:
+    #     if directory == "dataset":
+    #         workin = os.path.join()
+
+    return [f"./dataset/{symbol}{date}.csv" for date in available_dates]
 
 
 dates = get_available_dates(date_range)
