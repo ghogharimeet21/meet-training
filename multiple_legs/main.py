@@ -103,7 +103,7 @@ def extract_nearest_expiry(data, symbol, call_or_put):
     ...
 
 
-
+#
 # if call_or_put == "CE":
 #     strike_prices = []
 #     for row in call_data:
