@@ -217,10 +217,10 @@ def main():
                 if row["Symbol"] == sym:
                     final_data.append(row)
     print("start------------------")
-    for row in final_data:
-        print(row)
+    # for row in final_data:
+    #     print(row)
 
-        ...
+        # ...
     print("Block count", block_count)
 
 
