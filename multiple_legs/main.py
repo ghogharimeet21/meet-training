@@ -98,6 +98,7 @@ def extract_nearest_expiry(data, symbol, call_or_put):
         row["expiry"] = exp
         all_exps.append(exp)
     smallest_exp = get_smallest_expiry(all_exps, "%d%b%y")
+    
 
     return smallest_exp
     ...
@@ -207,6 +208,8 @@ def main():
     for exp, strike, opt in zip(smallest_exps, nearest_strike_to_spot, option_type):
         symbols.append(f"{index}{exp}{strike}{opt}")
 
+    print("Symbols we got", symbols)
+
     # get rows according to symbol
     final_data = []
     block_count = 0
@@ -216,11 +219,11 @@ def main():
             for row in block:
                 if row["Symbol"] == sym:
                     final_data.append(row)
-    print("start------------------")
-    # for row in final_data:
-    #     print(row)
+    
+    for block in final_data:
+        print(block)
+    
 
-        # ...
     print("Block count", block_count)
 
 
