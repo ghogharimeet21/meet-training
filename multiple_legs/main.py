@@ -5,6 +5,11 @@ import time
 def make_dict(header, values):
     return {header[i]: values[i] for i in range(len(header))}
 
+def write_in_jsonFile(result, outputpath, fileName):
+    import json
+    jsondata = json.dumps(result, indent=4)
+    with open(f"./{outputpath}/{fileName}.json", "w") as file:
+        file.write(jsondata)
 
 def take_closest(target, num_list):
     """Return the closest number from the given list to the target."""
@@ -15,6 +20,30 @@ def get_smallest_expiry(all_expiry, date_format):
     """Return the smallest date in a given list of dates."""
     date_objs = [datetime.strptime(date, date_format) for date in all_expiry]
     return datetime.strftime(min(date_objs), date_format).upper()
+
+def get_weekly_expiry(data):
+    all_dates_obj = []
+    for row in data:
+        exp_date = row["expiry"]
+        date_obj = datetime.strptime(exp_date, "%d%b%y")
+        all_dates_obj.append(date_obj)
+
+    return datetime.strftime(sorted(list(set(all_dates_obj)))[0].date(), "%d%b%y").upper()
+
+def get_monthly_expiry(data):
+    all_dates_obj = []
+    for row in data:
+        exp_date = row["expiry"]
+        date_obj = datetime.strptime(exp_date, "%d%b%y")
+        all_dates_obj.append(date_obj)
+    
+    weekly = get_weekly_expiry(data)
+
+    all_sorted_dates = sorted(all_dates_obj)
+
+    for date in all_sorted_dates:
+        weekly += timedelta(days=1)
+
 
 
 def get_available_dates(date_range: list, date_format: str):
@@ -91,47 +120,27 @@ def get_spot_price(entry_time, spot_price_rows):
     return spot_price
     ...
 
-def extract_nearest_expiry(data, symbol, call_or_put):
-    all_exps = []
+
+def extract_expiry(data, symbol, call_or_put):
+    all_exps_objs = []
     for row in data:
         exp = row["Symbol"].replace(symbol, "").replace(call_or_put, "")[:7]
         row["expiry"] = exp
-        all_exps.append(exp)
-    smallest_exp = get_smallest_expiry(all_exps, "%d%b%y")
-    
+        all_exps_objs.append(datetime.strptime(exp, "%d%b%y"))
+    weekly = sorted(list(set(all_exps_objs)))[0]
+    weekly_exp = datetime.strftime(weekly, "%d%b%y").upper()
 
-    return smallest_exp
-    ...
+    currunt_month = weekly.month
+    currunt_month_list = list(set([date for date in all_exps_objs if date.month == currunt_month]))
+    sortedList = sorted(currunt_month_list)
+    monthly_expiry = sortedList[-1]
+    monthly_exp = datetime.strftime(monthly_expiry.date(), "%d%b%y").upper()
 
-
-#
-# if call_or_put == "CE":
-#     strike_prices = []
-#     for row in call_data:
-#         exp = row["Symbol"].replace(symbol, "").replace(call_or_put, "")[:7]
-#         strike_price = row["Symbol"].replace(symbol, "").replace(call_or_put, "")[7:]
-#         strike_prices.append(strike_price)
-#         row["expiry"] = exp
-#         all_expiry.append(exp)
-#     # return call_data, get_smallest_expiry(all_expiry, "%d%m%Y")
-#     nearest_expiry = get_smallest_expiry(all_expiry, "%d%b%y")
-#     # print(nearest_expiry)
-
-# elif call_or_put == "PE":
-#     strike_prices = []
-#     for row in put_data:
-#         exp = row["Symbol"].replace(symbol, "").replace(call_or_put, "")[:7]
-#         strike_price = row["Symbol"].replace(symbol, "").replace(call_or_put, "")[7:]
-#         strike_prices.append(strike_price)
-#         row["expiry"] = exp
-#         all_expiry.append(exp)
-#     # return put_data, get_smallest_expiry(all_expiry, "%d%m%Y")
-#     nearest_expiry = get_smallest_expiry(all_expiry, "%d%b%y")
+    return weekly_exp, monthly_exp
 
 
 
-
-def main():
+def start_backtest():
     spot_price_symbol = "NIFTY-I"
     index = "NIFTY"
     date_range = ["08032023", "10032023"]
@@ -161,18 +170,21 @@ def main():
     for entry in entry_time:
         price = get_spot_price(entry, spot_price_rows)
         spot_prices.append(price)
+
+    print("Spot prices i got", spot_prices)
     
-    # def count_dim(lst): 
-    #     count = 0 
-    #     while isinstance(lst, list): 
-    #         count += 1 
-    #         lst = lst[0] 
-    #     return count
-    # print(count_dim(call_and_put_data))
+    def count_dim(lst): 
+        count = 0 
+        while isinstance(lst, list): 
+            count += 1 
+            lst = lst[0] 
+        return count
+    # print(count_dim(call_and_put_data), "D", len(call_and_put_data))
 
     strikescall = []
     strikesput = []
-    smallest_exps = []  #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    weekly_exps = []  #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    monthly_exps = [] #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     for block in call_and_put_data:
         if block[0]["Symbol"][-2:] == "CE":
             for row in block:
@@ -180,51 +192,71 @@ def main():
                 strike_price = row["Symbol"].replace(index, "").replace("CE", "")[7:]
                 strikescall.append(strike_price)
                 ...
-            print("Block changing........")
+            # print("Block changing........")
             # time.sleep(5)
-            smallest_exp = extract_nearest_expiry(block, index, "CE")
-            smallest_exps.append(smallest_exp)
+            weekly_exp, monthly_exp = extract_expiry(block, index, "CE")
+            weekly_exps.append(weekly_exp)
+            monthly_exps.append(monthly_exp)
         elif block[0]["Symbol"][-2:] == "PE":
             for row in block:
                 strike_price = row["Symbol"].replace(index, "").replace("CE", "")[7:]
                 strikesput.append(strike_price)
                 # print(row)
                 ...
-            print("block changing........")
+            # print("block changing........")
             # time.sleep(5)
-            smallest_exp = extract_nearest_expiry(block, index, "PE")
-            smallest_exps.append(smallest_exp)
+            weekly_exp, monthly_exp = extract_expiry(block, index, "PE")
+            weekly_exps.append(weekly_exp)
+            monthly_exps.append(monthly_exp)
     
-    nearest_strike_to_spot = [] #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    nearest_strike_to_spot = [] #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     for price in spot_prices:
         price = take_closest(price, strikescall)
         nearest_strike_to_spot.append(price)
     
-    print("nearest expires are", smallest_exps)
+    print("weekly expires are", weekly_exps)
+    print("monthly expires are", monthly_exps)
     print("nearest strike prices are", nearest_strike_to_spot)
 
     # make treading symbols according to nearest strike to spot and nearest expires
     symbols = []    #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    for exp, strike, opt in zip(smallest_exps, nearest_strike_to_spot, option_type):
-        symbols.append(f"{index}{exp}{strike}{opt}")
+    for expe in expiry:
+        for expweek, expmonth, strike, opt in zip(weekly_exps, monthly_exps, nearest_strike_to_spot, option_type):
+            if expe == "WEEKLY":
+                symbols.append(f"{index}{expweek}{strike}{opt}")
+            elif expe == "MONTHLY":
+                symbols.append(f"{index}{expmonth}{strike}{opt}")
 
-    print("Symbols we got", symbols)
+    print("Treading Symbols we got", symbols)
 
-    # get rows according to symbol
-    final_data = []
-    block_count = 0
+    result = []
     for sym in symbols:
         for block in call_and_put_data:
-            block_count += 1
             for row in block:
-                if row["Symbol"] == sym:
-                    final_data.append(row)
-    
-    for block in final_data:
-        print(block)
-    
+                if sym == row["Symbol"]:
+                    result.append(row)
 
-    print("Block count", block_count)
+    write_in_jsonFile(result=result, outputpath="outputdata", fileName="result_data")
+
+    final_result = []
+
+    for sym in symbols:
+        for row in result:
+            if row["Symbol"] == sym:
+                for entime, extime in zip(entry_time, exit_time):
+                    if entime == row["Time"]:
+                        # final_result[row["Symbol"]] = {"entry_time":row["Time"], "entry_price":row["Open"]}
+                        final_result.append({"Symbol":row["Symbol"], "entry_time":entime, "entry_price":row["Open"]})
+                    elif extime == row["Time"]:
+                        final_result.append({"Symbol":row["Symbol"], "exit_time":extime, "exit_price":row["Open"]})
+
+                        ...
+                ...
+
+    write_in_jsonFile(result=final_result, outputpath="outputdata", fileName="final_result")
+
+    print(final_result)
+
 
 
 
@@ -232,4 +264,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    start_backtest()
