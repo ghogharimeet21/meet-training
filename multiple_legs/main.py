@@ -78,7 +78,7 @@ def get_all_dataset_paths(dataset_folder_path, date_range):
 
 
 
-def load_data(paths, spot_price_symbol, call_or_put) -> list:
+def load_data(paths, spot_price_symbol) -> dict:
 
     spot_price_rows = []
     data = []
@@ -90,18 +90,15 @@ def load_data(paths, spot_price_symbol, call_or_put) -> list:
             lines = file.readlines()
             header = lines[0].strip().split(",")
             # ['', 'Symbol', 'Date', 'Time', 'Open', 'High', 'Low', 'Close', 'Volume', 'Open Interest', 'TickTime', '', '']
-            for line in lines:
+            for line in lines[1:]:
                 values = line.strip().split(",")
-                if values[1] == spot_price_symbol:
+                if values[1][-2:] == "CE":
+                    data.append(make_dict(header, values))
+                elif values[1][-2:] == "PE":
+                    data.append(make_dict(header, values))
+                elif values[1][-2:] == spot_price_symbol:
                     spot_price_rows.append(make_dict(header, values))
-                    ...
                 
-                if call_or_put == "CE":
-                    if values[1][-2:] == "CE":
-                        data.append(make_dict(header, values))
-                elif call_or_put == "PE":
-                    if values[1][-2:] == "PE":
-                        data.append(make_dict(header, values))
     
     return data, spot_price_rows
 
@@ -114,10 +111,10 @@ def get_spot_price(entry_time, spot_price_rows):
     ...
 
 
-def extract_expiry(data, symbol, call_or_put):
+def extract_expiry(data, symbol, option_type):
     all_exps_objs = []
     for row in data:
-        exp = row["Symbol"].replace(symbol, "").replace(call_or_put, "")[:7]
+        exp = row["Symbol"].replace(symbol, "").replace(option_type, "")[:7]
         row["expiry"] = exp
         all_exps_objs.append(datetime.strptime(exp, "%d%b%y"))
     weekly = sorted(list(set(all_exps_objs)))[0]
@@ -149,10 +146,7 @@ def start_backtest():
     paths = get_all_dataset_paths("dataset", dates)
 
     # got data according to input option_type in a list
-    call_and_put_data = []
-    for opt in option_type:
-        data, spot_price_rows = load_data(paths, spot_price_symbol, opt)
-        call_and_put_data.append(data)
+    dataset_mapper = load_data(paths, spot_price_symbol)
 
     # for d in call_or_put_data:
     #     for i in d:
@@ -203,7 +197,7 @@ def start_backtest():
 
 
 
-    nearest_strike_to_spot = [] #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    nearest_strike_to_spot = list(set([])) #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     for price in spot_prices:
         for strk in strike:
             if not strk.__contains__("+") or not strk.__contains__("-"):
@@ -223,6 +217,8 @@ def start_backtest():
                     nearest_strike_to_spot.append(another_strike)
                     ...
     
+    nearest_strike_to_spot = list(set(nearest_strike_to_spot))
+
     print("weekly expires are", weekly_exps)
     print("monthly expires are", monthly_exps)
     print("nearest strike prices are", nearest_strike_to_spot)
