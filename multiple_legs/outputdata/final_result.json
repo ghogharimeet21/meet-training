@@ -1,82 +1,26 @@
-[
-    {
-        "Symbol": "NIFTY09MAR2317750PE",
-        "entry_time": "9:45:00",
-        "entry_price": "114.15"
-    },
-    {
-        "Symbol": "NIFTY09MAR2317750PE",
+{
+    "NIFTY09MAR2317750PE": {
         "entry_time": "10:30:00",
-        "entry_price": "89.8"
-    },
-    {
-        "Symbol": "NIFTY09MAR2317750PE",
-        "exit_time": "14:30:00",
-        "exit_price": "68.7"
-    },
-    {
-        "Symbol": "NIFTY09MAR2317750PE",
+        "entry_price": "89.8",
         "exit_time": "15:15:00",
         "exit_price": "42.8"
     },
-    {
-        "Symbol": "NIFTY09MAR2317700CE",
-        "entry_time": "9:45:00",
-        "entry_price": "40.1"
-    },
-    {
-        "Symbol": "NIFTY09MAR2317700CE",
+    "NIFTY09MAR2317700CE": {
         "entry_time": "10:30:00",
-        "entry_price": "54.05"
-    },
-    {
-        "Symbol": "NIFTY09MAR2317700CE",
-        "exit_time": "14:30:00",
-        "exit_price": "57.1"
-    },
-    {
-        "Symbol": "NIFTY09MAR2317700CE",
+        "entry_price": "54.05",
         "exit_time": "15:15:00",
         "exit_price": "74.8"
     },
-    {
-        "Symbol": "NIFTY29MAR2317750PE",
-        "entry_time": "9:45:00",
-        "entry_price": "206.8"
-    },
-    {
-        "Symbol": "NIFTY29MAR2317750PE",
+    "NIFTY29MAR2317750PE": {
         "entry_time": "10:30:00",
-        "entry_price": "193.55"
-    },
-    {
-        "Symbol": "NIFTY29MAR2317750PE",
-        "exit_time": "14:30:00",
-        "exit_price": "180.5"
-    },
-    {
-        "Symbol": "NIFTY29MAR2317750PE",
+        "entry_price": "193.55",
         "exit_time": "15:15:00",
         "exit_price": "165.6"
     },
-    {
-        "Symbol": "NIFTY29MAR2317700CE",
-        "entry_time": "9:45:00",
-        "entry_price": "200.7"
-    },
-    {
-        "Symbol": "NIFTY29MAR2317700CE",
+    "NIFTY29MAR2317700CE": {
         "entry_time": "10:30:00",
-        "entry_price": "219.9"
-    },
-    {
-        "Symbol": "NIFTY29MAR2317700CE",
-        "exit_time": "14:30:00",
-        "exit_price": "226.5"
-    },
-    {
-        "Symbol": "NIFTY29MAR2317700CE",
+        "entry_price": "219.9",
         "exit_time": "15:15:00",
         "exit_price": "240.25"
     }
-]
+}

@@ -238,20 +238,22 @@ def start_backtest():
 
     write_in_jsonFile(result=result, outputpath="outputdata", fileName="result_data")
 
-    final_result = []
+    final_result = {}
 
     for sym in symbols:
         for row in result:
             if row["Symbol"] == sym:
                 for entime, extime in zip(entry_time, exit_time):
                     if entime == row["Time"]:
-                        # final_result[row["Symbol"]] = {"entry_time":row["Time"], "entry_price":row["Open"]}
-                        final_result.append({"Symbol":row["Symbol"], "entry_time":entime, "entry_price":row["Open"]})
+                        if sym not in final_result:
+                            final_result[sym] = {}
+                        final_result[sym]["entry_time"] = entime
+                        final_result[sym]["entry_price"] = row["Open"]
                     elif extime == row["Time"]:
-                        final_result.append({"Symbol":row["Symbol"], "exit_time":extime, "exit_price":row["Open"]})
-
-                        ...
-                ...
+                        if sym not in final_result:
+                            final_result[sym] = {}
+                        final_result[sym]["exit_time"] = extime
+                        final_result[sym]["exit_price"] = row["Open"]
 
     write_in_jsonFile(result=final_result, outputpath="outputdata", fileName="final_result")
 
