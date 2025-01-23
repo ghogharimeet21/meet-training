@@ -1,26 +1,26 @@
 {
     "NIFTY09MAR2317750PE": {
-        "entry_time": "10:30:00",
-        "entry_price": "89.8",
+        "entry_time": "9:45:00",
+        "entry_price": 114.15,
         "exit_time": "15:15:00",
-        "exit_price": "42.8"
+        "exit_price": 42.8
     },
     "NIFTY09MAR2317700CE": {
-        "entry_time": "10:30:00",
-        "entry_price": "54.05",
+        "entry_time": "9:45:00",
+        "entry_price": 40.1,
         "exit_time": "15:15:00",
-        "exit_price": "74.8"
+        "exit_price": 74.8
     },
     "NIFTY29MAR2317750PE": {
-        "entry_time": "10:30:00",
-        "entry_price": "193.55",
+        "entry_time": "9:45:00",
+        "entry_price": 206.8,
         "exit_time": "15:15:00",
-        "exit_price": "165.6"
+        "exit_price": 165.6
     },
     "NIFTY29MAR2317700CE": {
-        "entry_time": "10:30:00",
-        "entry_price": "219.9",
+        "entry_time": "9:45:00",
+        "entry_price": 200.7,
         "exit_time": "15:15:00",
-        "exit_price": "240.25"
+        "exit_price": 240.25
     }
 }

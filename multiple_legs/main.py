@@ -219,7 +219,7 @@ def start_backtest():
     print("nearest strike prices are", nearest_strike_to_spot)
 
     # make treading symbols according to nearest strike to spot and nearest expires
-    symbols = []    #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    symbols = list(set([]))    #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     for expe in expiry:
         for expweek, expmonth, strike, opt in zip(weekly_exps, monthly_exps, nearest_strike_to_spot, option_type):
             if expe == "WEEKLY":
@@ -228,7 +228,7 @@ def start_backtest():
                 symbols.append(f"{index}{expmonth}{strike}{opt}")
 
     print("Treading Symbols we got", symbols)
-
+    print()
     result = []
     for sym in symbols:
         for block in call_and_put_data:
@@ -240,24 +240,33 @@ def start_backtest():
 
     final_result = {}
 
-    for sym in symbols:
-        for row in result:
-            if row["Symbol"] == sym:
-                for entime, extime in zip(entry_time, exit_time):
-                    if entime == row["Time"]:
+    countentry = 0
+    countexit = 0
+
+    for ent, ext in zip(entry_time, exit_time):
+        for sym in symbols:
+            for row in result:
+                if sym == row["Symbol"]:
+                    if ent == row["Time"]:
+                        countentry += 1
                         if sym not in final_result:
                             final_result[sym] = {}
-                        final_result[sym]["entry_time"] = entime
-                        final_result[sym]["entry_price"] = row["Open"]
-                    elif extime == row["Time"]:
+                        final_result[sym]["entry_time"] = row["Time"]
+                        final_result[sym]["entry_price"] = float(row["Open"])
+                    elif ext == row["Time"]:
+                        countexit += 1
                         if sym not in final_result:
                             final_result[sym] = {}
-                        final_result[sym]["exit_time"] = extime
-                        final_result[sym]["exit_price"] = row["Open"]
+                        final_result[sym]["exit_time"] = row["Time"]
+                        final_result[sym]["exit_price"] = float(row["Open"])
+                    ...
+
 
     write_in_jsonFile(result=final_result, outputpath="outputdata", fileName="final_result")
 
     print(final_result)
+
+    print("entry condition =", countentry, "exit condition =", countexit)
 
 
 
