@@ -5,11 +5,11 @@
         "exit_time": "15:15:00",
         "exit_price": 42.8
     },
-    "NIFTY09MAR2317700CE": {
+    "NIFTY09MAR2317750CE": {
         "entry_time": "9:45:00",
-        "entry_price": 40.1,
+        "entry_price": 23.05,
         "exit_time": "15:15:00",
-        "exit_price": 74.8
+        "exit_price": 42.9
     },
     "NIFTY29MAR2317750PE": {
         "entry_time": "9:45:00",
@@ -17,10 +17,10 @@
         "exit_time": "15:15:00",
         "exit_price": 165.6
     },
-    "NIFTY29MAR2317700CE": {
+    "NIFTY29MAR2317750CE": {
         "entry_time": "9:45:00",
-        "entry_price": 200.7,
+        "entry_price": 172.55,
         "exit_time": "15:15:00",
-        "exit_price": 240.25
+        "exit_price": 210.65
     }
 }

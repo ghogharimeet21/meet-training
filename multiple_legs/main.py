@@ -75,14 +75,7 @@ def get_all_dataset_paths(dataset_folder_path, date_range):
 
     return paths
 
-def get_spot_price(spot_price_rows, entry_time):
-    spot_price = None
-    for row in spot_price_rows:
-        if row["Time"] == entry_time:
-            spot_price = float(row["Open"])
-            # print("Spot_price =", spot_price)
-            break
-    return spot_price
+
 
 
 def load_data(paths, spot_price_symbol, call_or_put) -> list:
@@ -181,6 +174,9 @@ def start_backtest():
         return count
     # print(count_dim(call_and_put_data), "D", len(call_and_put_data))
 
+
+
+
     strikescall = []
     strikesput = []
     weekly_exps = []  #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -188,31 +184,44 @@ def start_backtest():
     for block in call_and_put_data:
         if block[0]["Symbol"][-2:] == "CE":
             for row in block:
-                # print(row)
                 strike_price = row["Symbol"].replace(index, "").replace("CE", "")[7:]
                 strikescall.append(strike_price)
-                ...
-            # print("Block changing........")
-            # time.sleep(5)
+
             weekly_exp, monthly_exp = extract_expiry(block, index, "CE")
             weekly_exps.append(weekly_exp)
             monthly_exps.append(monthly_exp)
+        
         elif block[0]["Symbol"][-2:] == "PE":
             for row in block:
                 strike_price = row["Symbol"].replace(index, "").replace("CE", "")[7:]
                 strikesput.append(strike_price)
-                # print(row)
-                ...
-            # print("block changing........")
-            # time.sleep(5)
+
             weekly_exp, monthly_exp = extract_expiry(block, index, "PE")
             weekly_exps.append(weekly_exp)
             monthly_exps.append(monthly_exp)
     
+
+
+
     nearest_strike_to_spot = [] #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     for price in spot_prices:
-        price = take_closest(price, strikescall)
-        nearest_strike_to_spot.append(price)
+        for strk in strike:
+            if not strk.__contains__("+") or not strk.__contains__("-"):
+                price = float(take_closest(price, strikescall))
+                nearest_strike_to_spot.append(price)
+            elif strk.__contains__("+" or "-"):
+                operation = strk[strk.find("+" or "-")]
+                digit = int(strk[-1])
+                if operation == "+":
+                    sortedStrikes = sorted(strikescall)
+                    another_strike = sortedStrikes[index(take_closest(price, strikescall)) + digit]
+                    nearest_strike_to_spot.append(another_strike)
+                    ...
+                elif operation == "-":
+                    sortedStrikes = sorted(strikescall)
+                    another_strike = sortedStrikes[index(take_closest(price, strikescall)) - digit]
+                    nearest_strike_to_spot.append(another_strike)
+                    ...
     
     print("weekly expires are", weekly_exps)
     print("monthly expires are", monthly_exps)
@@ -223,9 +232,9 @@ def start_backtest():
     for expe in expiry:
         for expweek, expmonth, strike, opt in zip(weekly_exps, monthly_exps, nearest_strike_to_spot, option_type):
             if expe == "WEEKLY":
-                symbols.append(f"{index}{expweek}{strike}{opt}")
+                symbols.append(f"{index}{expweek}{str(int(strike))}{opt}")
             elif expe == "MONTHLY":
-                symbols.append(f"{index}{expmonth}{strike}{opt}")
+                symbols.append(f"{index}{expmonth}{str(int(strike))}{opt}")
 
     print("Treading Symbols we got", symbols)
     print()
