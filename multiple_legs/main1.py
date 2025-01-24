@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 import os
-import time
+import json
 
 
 def make_dict(header, values):
@@ -12,10 +12,10 @@ def get_strike_expiry(symbol: str, index, option_type):
 
     return strike, expiry
 
+def convert_dateformat(date, format, to_format):
+    return datetime.strftime(datetime.strptime(date, format), to_format)
 
 def write_in_jsonFile(result, outputpath, fileName):
-    import json
-
     jsondata = json.dumps(result, indent=4)
     with open(f"./{outputpath}/{fileName}.json", "w") as file:
         file.write(jsondata)
@@ -56,9 +56,9 @@ def get_all_dataset_paths(dataset_folder_path, date_range):
     return paths
 
 
-def load_data(paths, spot_price_symbol) -> dict:
+def load_data(paths, spot_price_symbol, index) -> dict:
 
-    spot_price_rows = []
+    
     dataset_mapper = {}
     for path in paths:
         if not os.path.exists(path):
@@ -161,6 +161,54 @@ def load_data(paths, spot_price_symbol) -> dict:
                         dataset_mapper[date][spot_price_symbol][symbol][time] = []
                     
                     dataset_mapper[date][spot_price_symbol][symbol][time] = [open_price,high_price, low_price, close_price]
+            
+        symbols = []
+    for date in dataset_mapper:
+        for type in dataset_mapper[date]:
+            # print(type)
+            for symbol in dataset_mapper[date][type]:
+                symbols.append(symbol)
+
+    call_exps = []
+    put_exps = []
+    call_strikes = []
+    put_strikes = []
+    for sym in symbols:
+        if sym[-2:] == "CE":
+            strike, expiry = get_strike_expiry(sym, index, "CE")
+            if expiry not in call_exps:
+                call_exps.append(expiry)
+            if strike not in call_strikes:
+                call_strikes.append(strike)
+        if sym[-2:] == "PE":
+            strike, expiry = get_strike_expiry(sym, index, "PE")
+            if expiry not in put_exps:
+                put_exps.append(expiry)
+            if strike not in put_strikes:
+                put_strikes.append(strike)
+    
+    sorted_put_exps = sort_dates(date_format="%d%b%y", date_list=put_exps)
+    sorted_put_strikes = sorted(put_strikes)
+
+    sorted_call_exps = sort_dates(date_format="%d%b%y", date_list=call_exps)
+    sorted_call_strikes = sorted(call_strikes)
+
+    for date in dataset_mapper:
+        for row in dataset_mapper[date]:
+            if row == "PUT_DETAILS":
+                for elm in dataset_mapper[date][row]:
+                    if elm == "avilable_strikes":
+                        dataset_mapper[date][row][elm] = sorted_put_strikes
+                    elif elm == "avilable_expires":
+                        dataset_mapper[date][row][elm] = sorted_put_exps
+    for date in dataset_mapper:
+        for row in dataset_mapper[date]:
+            if row == "CALL_DETAILS":
+                for elm in dataset_mapper[date][row]:
+                    if elm == "avilable_strikes":
+                        dataset_mapper[date][row][elm] = sorted_call_strikes
+                    elif elm == "avilable_expires":
+                        dataset_mapper[date][row][elm] = sorted_call_exps
 
     return dataset_mapper
 
@@ -193,6 +241,10 @@ def extract_expiry(data, symbol, option_type):
 
     return weekly_exp, monthly_exp
 
+def sort_dates(date_format: str, date_list: list):
+    return [datetime.strftime(obj, date_format).upper() for obj in sorted([datetime.strptime(date, date_format) for date in date_list])]
+
+
 
 def start_backtest():
     spot_price_symbol = "NIFTY-I"
@@ -210,11 +262,19 @@ def start_backtest():
     paths = get_all_dataset_paths("dataset", dates)
 
     # got data according to input option_type in a list
-    dataset_mapper = load_data(paths, spot_price_symbol)
+    dataset_mapper = load_data(paths, spot_price_symbol, index)
 
-    # write_in_jsonFile(dataset_mapper, "outputdata", "data")
+    # write_in_jsonFile(dataset_mapper, "outputdata", "dataset_mapper")
 
+
+    # Get Spot Price
+    spot_prices = []
     
+
+
+
+
+
 
 
 if __name__ == "__main__":
