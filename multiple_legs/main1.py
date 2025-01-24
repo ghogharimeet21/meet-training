@@ -6,24 +6,26 @@ import json
 def make_dict(header, values):
     return {header[i]: values[i] for i in range(len(header))}
 
+
 def get_strike_expiry(symbol: str, index, option_type):
     strike = symbol.replace(index, "").replace(option_type, "")[7:]
     expiry = symbol.replace(index, "").replace(option_type, "")[:7]
 
     return strike, expiry
 
+
 def convert_dateformat(date, format, to_format):
     return datetime.strftime(datetime.strptime(date, format), to_format)
 
-def write_in_jsonFile(result, outputpath, fileName):
+
+def write_in_jsonFile(result, outPEpath, fileName):
     jsondata = json.dumps(result, indent=4)
-    with open(f"./{outputpath}/{fileName}.json", "w") as file:
+    with open(f"./{outPEpath}/{fileName}.json", "w") as file:
         file.write(jsondata)
 
 
-def take_closest(target, num_list):
-    """Return the closest number from the given list to the target."""
-    return min(num_list, key=lambda x: abs(float(x) - target))
+def get_atm(spot_perice, strike_list):
+    return min(strike_list, key=lambda x: abs(float(x) - spot_perice))
 
 
 def get_available_dates(date_range: list, date_format: str):
@@ -58,7 +60,6 @@ def get_all_dataset_paths(dataset_folder_path, date_range):
 
 def load_data(paths, spot_price_symbol, index) -> dict:
 
-    
     dataset_mapper = {}
     for path in paths:
         if not os.path.exists(path):
@@ -69,7 +70,6 @@ def load_data(paths, spot_price_symbol, index) -> dict:
             header = lines[0].strip().split(",")
             # ['', 'Symbol', 'Date', 'Time', 'Open', 'High', 'Low', 'Close', 'Volume', 'Open Interest', 'TickTime', '', '']
 
-            
             for line in lines[1:]:
 
                 values = line.strip().split(",")
@@ -83,85 +83,96 @@ def load_data(paths, spot_price_symbol, index) -> dict:
                 close_price = values[7]
 
                 if values[1][-2:] == "CE":
-                    
+
                     # initialized the if not available in the mapper
                     if date not in dataset_mapper:
                         dataset_mapper[date] = {
-                            "CALL": {},
-                            "CALL_DETAILS": {
-                                "avilable_strikes": [],
-                                "avilable_expires": []
-                                },
-                            "PUT": {},
-                            "PUT_DETAILS": {
-                                "avilable_strikes": [],
-                                "avilable_expires": []
+                            "CE": {},
+                            "CE_DETAILS": {
+                                "available_strikes": [],
+                                "": [],
+                            },
+                            "PE": {},
+                            "PE_DETAILS": {
+                                "available_strikes": [],
+                                "available_expiries": [],
                             },
                             "NIFTY-I": {},
                         }
                     # Intialize symbol.
-                    if symbol not in dataset_mapper[date]["CALL"]:
-                        dataset_mapper[date]["CALL"][symbol] = {}
+                    if symbol not in dataset_mapper[date]["CE"]:
+                        dataset_mapper[date]["CE"][symbol] = {}
 
-                    
                     # initialize time
-                    if time not in dataset_mapper[date]["CALL"][symbol]:
-                        dataset_mapper[date]["CALL"][symbol][time] = []
-                    
-                    dataset_mapper[date]["CALL"][symbol][time] = [open_price, high_price, low_price, close_price]
+                    if time not in dataset_mapper[date]["CE"][symbol]:
+                        dataset_mapper[date]["CE"][symbol][time] = []
+
+                    dataset_mapper[date]["CE"][symbol][time] = [
+                        open_price,
+                        high_price,
+                        low_price,
+                        close_price,
+                    ]
 
                 elif values[1][-2:] == "PE":
                     # initialized the if not available in the mapper
                     if date not in dataset_mapper:
                         dataset_mapper[date] = {
-                            "CALL": {},
-                            "CALL_DETAILS": {
-                                "avilable_strikes": [],
-                                "avilable_expires": []
-                                },
-                            "PUT": {},
-                            "PUT_DETAILS": {
-                                "avilable_strikes": [],
-                                "avilable_expires": []
+                            "CE": {},
+                            "CE_DETAILS": {
+                                "available_strikes": [],
+                                "available_expiries": [],
+                            },
+                            "PE": {},
+                            "PE_DETAILS": {
+                                "available_strikes": [],
+                                "available_expiries": [],
                             },
                             "NIFTY-I": {},
                         }
                     # Intialize symbol.
-                    if symbol not in dataset_mapper[date]["PUT"]:
-                        dataset_mapper[date]["PUT"][symbol] = {}
-                    
+                    if symbol not in dataset_mapper[date]["PE"]:
+                        dataset_mapper[date]["PE"][symbol] = {}
+
                     # initialize time
-                    if time not in dataset_mapper[date]["PUT"][symbol]:
-                        dataset_mapper[date]["PUT"][symbol][time] = []
-                    
-                    dataset_mapper[date]["PUT"][symbol][time] = [open_price,high_price, low_price, close_price]
+                    if time not in dataset_mapper[date]["PE"][symbol]:
+                        dataset_mapper[date]["PE"][symbol][time] = []
+
+                    dataset_mapper[date]["PE"][symbol][time] = [
+                        open_price,
+                        high_price,
+                        low_price,
+                        close_price,
+                    ]
 
                 elif values[1] == spot_price_symbol:
                     # initialized the if not available in the mapper
                     if date not in dataset_mapper:
                         dataset_mapper[date] = {
-                            "CALL": {},
-                            "CALL_DETAILS": {
-                                "avilable_strikes": [],
-                                "avilable_expires": []
-                                },
-                            "PUT": {},
-                            "PUT_DETAILS": {
-                                "avilable_strikes": [],
-                                "avilable_expires": []
+                            "CE": {},
+                            "CE_DETAILS": {
+                                "available_strikes": [],
+                                "available_expiries": [],
+                            },
+                            "PE": {},
+                            "PE_DETAILS": {
+                                "available_strikes": [],
+                                "available_expiries": [],
                             },
                             "NIFTY-I": {},
                         }
-                    # Intialize symbol.
-                    if symbol not in dataset_mapper[date][spot_price_symbol]:
-                        dataset_mapper[date][spot_price_symbol][symbol] = {}
-                    
+
                     # initialize time
-                    if time not in dataset_mapper[date][spot_price_symbol][symbol]:
-                        dataset_mapper[date][spot_price_symbol][symbol][time] = []
-                    
-                    dataset_mapper[date][spot_price_symbol][symbol][time] = [open_price,high_price, low_price, close_price]
-            
+                    if time not in dataset_mapper[date][spot_price_symbol]:
+                        dataset_mapper[date][spot_price_symbol][time] = []
+
+                    dataset_mapper[date][spot_price_symbol][time] = [
+                        open_price,
+                        high_price,
+                        low_price,
+                        close_price,
+                    ]
+
         symbols = []
     for date in dataset_mapper:
         for type in dataset_mapper[date]:
@@ -169,57 +180,48 @@ def load_data(paths, spot_price_symbol, index) -> dict:
             for symbol in dataset_mapper[date][type]:
                 symbols.append(symbol)
 
-    call_exps = []
-    put_exps = []
-    call_strikes = []
-    put_strikes = []
+    CE_exps = []
+    PE_exps = []
+    CE_strikes = []
+    PE_strikes = []
     for sym in symbols:
         if sym[-2:] == "CE":
             strike, expiry = get_strike_expiry(sym, index, "CE")
-            if expiry not in call_exps:
-                call_exps.append(expiry)
-            if strike not in call_strikes:
-                call_strikes.append(strike)
+            if expiry not in CE_exps:
+                CE_exps.append(expiry)
+            if strike not in CE_strikes:
+                CE_strikes.append(strike)
         if sym[-2:] == "PE":
             strike, expiry = get_strike_expiry(sym, index, "PE")
-            if expiry not in put_exps:
-                put_exps.append(expiry)
-            if strike not in put_strikes:
-                put_strikes.append(strike)
-    
-    sorted_put_exps = sort_dates(date_format="%d%b%y", date_list=put_exps)
-    sorted_put_strikes = sorted(put_strikes)
+            if expiry not in PE_exps:
+                PE_exps.append(expiry)
+            if strike not in PE_strikes:
+                PE_strikes.append(strike)
 
-    sorted_call_exps = sort_dates(date_format="%d%b%y", date_list=call_exps)
-    sorted_call_strikes = sorted(call_strikes)
+    sorted_PE_exps = sort_dates(date_format="%d%b%y", date_list=PE_exps)
+    sorted_PE_strikes = sorted(PE_strikes)
+
+    sorted_CE_exps = sort_dates(date_format="%d%b%y", date_list=CE_exps)
+    sorted_CE_strikes = sorted(CE_strikes)
 
     for date in dataset_mapper:
         for row in dataset_mapper[date]:
-            if row == "PUT_DETAILS":
+            if row == "PE_DETAILS":
                 for elm in dataset_mapper[date][row]:
-                    if elm == "avilable_strikes":
-                        dataset_mapper[date][row][elm] = sorted_put_strikes
-                    elif elm == "avilable_expires":
-                        dataset_mapper[date][row][elm] = sorted_put_exps
+                    if elm == "available_strikes":
+                        dataset_mapper[date][row][elm] = sorted_PE_strikes
+                    elif elm == "available_expiries":
+                        dataset_mapper[date][row][elm] = sorted_PE_exps
     for date in dataset_mapper:
         for row in dataset_mapper[date]:
-            if row == "CALL_DETAILS":
+            if row == "CE_DETAILS":
                 for elm in dataset_mapper[date][row]:
-                    if elm == "avilable_strikes":
-                        dataset_mapper[date][row][elm] = sorted_call_strikes
-                    elif elm == "avilable_expires":
-                        dataset_mapper[date][row][elm] = sorted_call_exps
+                    if elm == "available_strikes":
+                        dataset_mapper[date][row][elm] = sorted_CE_strikes
+                    elif elm == "available_expiries":
+                        dataset_mapper[date][row][elm] = sorted_CE_exps
 
     return dataset_mapper
-
-
-# def get_spot_price(entry_time, spot_price_rows):
-#     spot_price = None
-#     for row in spot_price_rows:
-#         if row["Time"] == entry_time:
-#             spot_price = float(row["Open"])
-#     return spot_price
-#     ...
 
 
 def extract_expiry(data, symbol, option_type, date_format="%d%b%y"):
@@ -246,12 +248,18 @@ def get_monthly_expiry(date_list: list, date_fomat="%d%b%y"):
     date_objs = [datetime.strptime(date, date_fomat) for date in date_list]
     weekly = date_objs[0]
     currunt_month = weekly.month
-    currunt_month_list = list(set([date for date in date_objs if date.month == currunt_month]))
+    currunt_month_list = list(
+        set([date for date in date_objs if date.month == currunt_month])
+    )
     return datetime.strftime(currunt_month[-1], date_fomat).upper()
 
 
 def sort_dates(date_format: str, date_list: list):
-    return [datetime.strftime(obj, date_format).upper() for obj in sorted([datetime.strptime(date, date_format) for date in date_list])]
+    return [
+        datetime.strftime(obj, date_format).upper()
+        for obj in sorted([datetime.strptime(date, date_format) for date in date_list])
+    ]
+
 
 def get_spot_price(spot_price_symbol, datset_mapper, entry_time):
     spot_price = None
@@ -262,36 +270,40 @@ def get_spot_price(spot_price_symbol, datset_mapper, entry_time):
                     for time in datset_mapper[segment][symbol]:
                         if time == entry_time:
                             spot_price = float(datset_mapper[segment][symbol][time][0])
-                            ...
     return spot_price
 
 
-def find_symbol(currunt_date, index: str, atm: int, shift: int, expiry_type: str, option_type: str, tread_action: str):
+def find_symbol(
+    index,
+    spot_price,
+    available_expiries,
+    available_strikes,
+    opt_type,
+    shift,
+    expiry_type,
+):
     strike = None
     expiry = None
-    segment_type = "CALL_DETAILS" if option_type == "CE" else "PUT_DETAILS"
-    for segment in currunt_date:
-        if segment == segment_type:
-            for segment_detail in currunt_date[segment]:
-                atm_index = segment_detail["available_strikes"].index(atm)
-                strike = segment_detail["available_strikes"][atm_index+shift]
-                if expiry_type == "WEEKLY":
-                    expiry = segment_detail["available_expiries"][0]
-                elif expiry_type == "NEXT_WEEKLY":
-                    expiry = segment_detail["available_expiries"][1]
-                elif expiry_type == "MONTHLY":
-                    expiry = get_monthly_expiry(segment_detail["available_expiries"])
-                elif expiry_type == "FAR_WEEKLY":
-                    if segment_detail[3] != get_monthly_expiry(segment_detail["available_expiries"]):
-                        expiry = segment_detail["available_expiries"][3]
-                    else:
-                        expiry = get_monthly_expiry(segment_detail["available_expiries"])
+
+    atm = get_atm(float(spot_price), available_strikes)
+
+    atm_index = available_strikes.index(atm)
+    strike = available_strikes[atm_index + shift]
+
+    if expiry_type == "WEEKLY":
+        expiry = available_expiries[0]
+
+    elif expiry_type == "NEXT_WEEKLY":
+        expiry = available_expiries[1]
+
+    elif expiry_type == "MONTHLY":
+        # expiry = get_monthly_expiry(available_expiries)
+        pass
 
     if (not strike) or (not expiry):
-        return 
+        return
 
-    return index + strike + expiry + option_type
-
+    return index + strike + expiry + opt_type
 
 
 def start_backtest():
@@ -300,47 +312,86 @@ def start_backtest():
     date_range = ["08032023", "10032023"]
     entry_time = ["10:30:00", "9:45:00"]
     exit_time = ["14:30:00", "15:15:00"]
-    tread_action = ["BUY", "SELL"]
+    trade_option = ["BUY", "SELL"]
     option_type = ["PE", "CE"]
     strike = ["ATM", "ATM+1"]
-    expiry = ["WEEKLY", "NEXT_WEEKLY"]
+    expiries = ["WEEKLY", "NEXT_WEEKLY"]
 
-    if (len(entry_time) != len(exit_time)) and (len(tread_action) != len(option_type)) and (len(strike) != len(expiry)):
-        raise "Please check all inputs"
-        exit()
+    if (
+        (len(entry_time) != len(exit_time))
+        or (len(trade_option) != len(option_type))
+        or (len(strike) != len(expiries))
+    ):
+        raise "Please check all inPEs"
 
     dates = get_available_dates(date_range=date_range, date_format="%d%m%Y")
 
     paths = get_all_dataset_paths("dataset", dates)
 
-    # got data according to input option_type in a list
+    # got data according to inPE option_type in a list
     dataset_mapper = load_data(paths, spot_price_symbol, index)
 
-    # write_in_jsonFile(dataset_mapper, "outputdata", "dataset_mapper")
+    write_in_jsonFile(dataset_mapper, "outputdata", "dataset_mapper")
+    # ---------------------------------------------------------------------
+    for current_date in dataset_mapper:
+        spot_prices = []
+        for i, ent_time in enumerate(entry_time):
+            opt_type = option_type[i]
 
+            for time, index_prices in dataset_mapper[current_date][spot_price_symbol].items():
+                if time == ent_time:
+                    spot_prices.append(index_prices[0])
 
+        contracts = []
+        for i, spot_price in enumerate(spot_prices):
+            opt_type = option_type[i]
+            expiry_type = expiries[i]
+            shift = strike[i].replace("ATM", "")
+            if len(shift) == 0:
+                shift = 0
+            else:
+                shift = int(shift)
 
-    spot_prices = []
-    nearest_strike_to_spot = []
-    for entry_time, exit_time, action, option, strike, expiry in zip(entry_time, exit_time, tread_action, option_type, strike, expiry):
+            segment_type = "CE_DETAILS" if option_type == "CE" else "PE_DETAILS"
+            segment_details = dataset_mapper[current_date][segment_type]
+            contract = find_symbol(
+                index,
+                spot_price,
+                segment_details["available_expiries"],
+                segment_details["available_strikes"],
+                opt_type,
+                shift,
+                expiry_type,
+            )
+            contracts.append(contract)
 
-        for date in dataset_mapper:
-            spot_prices.append(get_spot_price(spot_price_symbol, dataset_mapper[date], entry_time))
+        print(contracts)
 
-    # get nearest to spot_price
-    
+    # ---------------------------------------------------------------------
+    # spot_prices = []
+    # nearest_strike_to_spot = []
+    # for ent_time, ext_time, action, option, strike_type, expiry_type in zip(entry_time, exit_time, trade_option, option_type, strike, expiry):
 
+    #     for date in dataset_mapper:
+    #         spot_prices.append(get_spot_price(spot_price_symbol, dataset_mapper[date], ent_time))
 
+    # # get nearest to spot_price
+    # for date in dataset_mapper:
+    #     for segment in dataset_mapper[date]:
+    #         if segment == "PE_DETAILS":
+    #             for options in dataset_mapper[date][segment]:
+    #                 # print(options)
 
+    #                 if options == "available_strikes":
+    #                     strikes = dataset_mapper[date][segment][options]
 
+    #                     symbol = find_symbol(dataset_mapper[date], index, strike_type, )
+    #                     ...
+    #                 ...
+    #             ...
 
-    print(spot_prices)
-
-
-
-
-
-
+    # print("Spot Prices", spot_prices)
+    # print("nearest strikes to spot", nearest_strike_to_spot)
 
 
 if __name__ == "__main__":
