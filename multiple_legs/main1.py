@@ -213,23 +213,23 @@ def load_data(paths, spot_price_symbol, index) -> dict:
     return dataset_mapper
 
 
-def get_spot_price(entry_time, spot_price_rows):
-    spot_price = None
-    for row in spot_price_rows:
-        if row["Time"] == entry_time:
-            spot_price = float(row["Open"])
-    return spot_price
-    ...
+# def get_spot_price(entry_time, spot_price_rows):
+#     spot_price = None
+#     for row in spot_price_rows:
+#         if row["Time"] == entry_time:
+#             spot_price = float(row["Open"])
+#     return spot_price
+#     ...
 
 
-def extract_expiry(data, symbol, option_type):
+def extract_expiry(data, symbol, option_type, date_format="%d%b%y"):
     all_exps_objs = []
     for row in data:
         exp = row["Symbol"].replace(symbol, "").replace(option_type, "")[:7]
         row["expiry"] = exp
-        all_exps_objs.append(datetime.strptime(exp, "%d%b%y"))
+        all_exps_objs.append(datetime.strptime(exp, date_format))
     weekly = sorted(list(set(all_exps_objs)))[0]
-    weekly_exp = datetime.strftime(weekly, "%d%b%y").upper()
+    weekly_exp = datetime.strftime(weekly, date_format).upper()
 
     currunt_month = weekly.month
     currunt_month_list = list(
@@ -237,12 +237,60 @@ def extract_expiry(data, symbol, option_type):
     )
     sortedList = sorted(currunt_month_list)
     monthly_expiry = sortedList[-1]
-    monthly_exp = datetime.strftime(monthly_expiry.date(), "%d%b%y").upper()
+    monthly_exp = datetime.strftime(monthly_expiry.date(), date_format).upper()
 
     return weekly_exp, monthly_exp
 
+
+def get_monthly_expiry(date_list: list, date_fomat="%d%b%y"):
+    date_objs = [datetime.strptime(date, date_fomat) for date in date_list]
+    weekly = date_objs[0]
+    currunt_month = weekly.month
+    currunt_month_list = list(set([date for date in date_objs if date.month == currunt_month]))
+    return datetime.strftime(currunt_month[-1], date_fomat).upper()
+
+
 def sort_dates(date_format: str, date_list: list):
     return [datetime.strftime(obj, date_format).upper() for obj in sorted([datetime.strptime(date, date_format) for date in date_list])]
+
+def get_spot_price(spot_price_symbol, datset_mapper, entry_time):
+    spot_price = None
+    for date in datset_mapper:
+        for segment in datset_mapper[date]:
+            if segment == spot_price_symbol:
+                for symbol in datset_mapper[segment]:
+                    for time in datset_mapper[segment][symbol]:
+                        if time == entry_time:
+                            spot_price = float(datset_mapper[segment][symbol][time][0])
+                            ...
+    return spot_price
+
+
+def find_symbol(currunt_date, index: str, atm: int, shift: int, expiry_type: str, option_type: str, tread_action: str):
+    strike = None
+    expiry = None
+    segment_type = "CALL_DETAILS" if option_type == "CE" else "PUT_DETAILS"
+    for segment in currunt_date:
+        if segment == segment_type:
+            for segment_detail in currunt_date[segment]:
+                atm_index = segment_detail["available_strikes"].index(atm)
+                strike = segment_detail["available_strikes"][atm_index+shift]
+                if expiry_type == "WEEKLY":
+                    expiry = segment_detail["available_expiries"][0]
+                elif expiry_type == "NEXT_WEEKLY":
+                    expiry = segment_detail["available_expiries"][1]
+                elif expiry_type == "MONTHLY":
+                    expiry = get_monthly_expiry(segment_detail["available_expiries"])
+                elif expiry_type == "FAR_WEEKLY":
+                    if segment_detail[3] != get_monthly_expiry(segment_detail["available_expiries"]):
+                        expiry = segment_detail["available_expiries"][3]
+                    else:
+                        expiry = get_monthly_expiry(segment_detail["available_expiries"])
+
+    if (not strike) or (not expiry):
+        return 
+
+    return index + strike + expiry + option_type
 
 
 
@@ -254,8 +302,12 @@ def start_backtest():
     exit_time = ["14:30:00", "15:15:00"]
     tread_action = ["BUY", "SELL"]
     option_type = ["PE", "CE"]
-    strike = ["ATM", "ATM + 1"]
-    expiry = ["WEEKLY", "MONTHLY"]
+    strike = ["ATM", "ATM+1"]
+    expiry = ["WEEKLY", "NEXT_WEEKLY"]
+
+    if (len(entry_time) != len(exit_time)) and (len(tread_action) != len(option_type)) and (len(strike) != len(expiry)):
+        raise "Please check all inputs"
+        exit()
 
     dates = get_available_dates(date_range=date_range, date_format="%d%m%Y")
 
@@ -267,9 +319,23 @@ def start_backtest():
     # write_in_jsonFile(dataset_mapper, "outputdata", "dataset_mapper")
 
 
-    # Get Spot Price
+
     spot_prices = []
+    nearest_strike_to_spot = []
+    for entry_time, exit_time, action, option, strike, expiry in zip(entry_time, exit_time, tread_action, option_type, strike, expiry):
+
+        for date in dataset_mapper:
+            spot_prices.append(get_spot_price(spot_price_symbol, dataset_mapper[date], entry_time))
+
+    # get nearest to spot_price
     
+
+
+
+
+
+    print(spot_prices)
+
 
 
 
