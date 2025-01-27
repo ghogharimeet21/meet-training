@@ -305,63 +305,66 @@ def find_symbol(
     return index + expiry + strike + opt_type
 
 def get_startagy_entry_exit_time(entry_time:list, exit_time:list):
-    entry_objs = [datetime.strptime(time, "%H%M%S") for time in entry_time]
-    exit_objs = [datetime.strptime(time, "%H%M%S") for time in exit_time]
+    entry_objs = [datetime.strptime(time, "%H:%M:%S") for time in entry_time]
+    exit_objs = [datetime.strptime(time, "%H:%M:%S") for time in exit_time]
 
     return min(entry_objs), max(exit_objs)
 
+def get_available_time_range(date_range: list, date_format: str):
+    """Generate a list of dates between a given range."""
+    if len(date_range) > 2:
+        print(date_range[2:], "out of range")
+        raise "please enter a date in range of 2......"
+
+    from_date = datetime.strptime(date_range[0], date_format)
+    to_date = datetime.strptime(date_range[1], date_format)
+    dates = []
+    while from_date <= to_date:
+        dates.append(datetime.strftime(from_date, date_format))
+        from_date += timedelta(minutes=1)
+    return dates
+
 def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targetList, stop_lossList):
     result = {}
+    print("contracts.", contracts)
+
+        
+
+    min_entry_time, max_exit_time = get_startagy_entry_exit_time(entry_time, exit_time)
+    time_range = get_available_time_range([datetime.strftime(min_entry_time, "%H:%M:%S"), datetime.strftime(max_exit_time, "%H:%M:%S")], "%H:%M:%S")
 
 
-    for ent, ext, con in zip(entry_time, exit_time, contracts):
-        option_type = con[-2:]
-        for currunt_date in datset_mapper:
-            for segment in datset_mapper[currunt_date]:
-                if option_type == segment:
-                    for symbol in datset_mapper[currunt_date][segment]:
-                        if symbol == con:
-                            if con not in result:
-                                result[symbol] = {}
-
-                            for time in datset_mapper[currunt_date][segment][symbol]:
-                            # min_entry_time, max_exit_time = get_startagy_entry_exit_time(entry_time, exit_time)
-                            # for time in range(min_entry_time, max_exit_time):
-                                open_price = float(datset_mapper[currunt_date][segment][symbol][time][0])
-                                high_price = float(datset_mapper[currunt_date][segment][symbol][time][1])
-                                low_price = float(datset_mapper[currunt_date][segment][symbol][time][2])
-                                if time == ent:
-                                    if time not in result[symbol]:
-                                        result[symbol]["entry_time"] = time
-                                        result[symbol]["entry_price"] = open_price
-                                elif time == ext:
-                                    if time not in result[symbol]:
-                                        result[symbol]["exit_time"] = time
-                                        result[symbol]["exit_price"] = open_price
-                                        result[symbol]["exit_reason"] = "normal exit"
-                                else:
-                                    if "entry_price" in result[symbol].keys():
-                                        for action, target, stoploss in zip(tread_actions, targetList, stop_lossList):
-                                                target_price = result[symbol]["entry_price"] + target if action == "BUY" else result[symbol]["entry_price"] - target
-                                                stop_loss_price = result[symbol]["entry_price"] - stoploss if action == "BUY" else result[symbol]["entry_price"] + stoploss
-                                                result[symbol]["target"] = float(target_price)
-                                                result[symbol]["stop_loss"] = float(stop_loss_price)
-                                    else:
-                                        continue
-                                    ...
-
+    for currunt_date in datset_mapper:
+        # Loop over time_span.
+        for time in time_range:
+            # Loop over legs.
+            for i, leg_entry_time in enumerate(entry_time):
+                leg_exit_time = exit_time[i]
+                contract = contracts[i]
+                option_type = contract[-2:]
+                open_price = float(datset_mapper[currunt_date][option_type][contract][time][0])
+                high_price = float(datset_mapper[currunt_date][option_type][contract][time][1])
+                low_price = float(datset_mapper[currunt_date][option_type][contract][time][2])
+                if time == leg_entry_time:
+                    if contract not in result:
+                        result[contract] = {
+                            "contract_symbol": contract,
+                            "entry_time": None,
+                            "entry_price": None,
+                            "exit_time": None,
+                            "exit_price": None,
+                            "pnl":None
+                        }
+                    result[contract]["entry_time"] = time
+                    result[contract]["entry_price"] = open_price
+                elif time == leg_exit_time:
+                    if contract not in result:
+                        continue
+                    result[contract]["exit_time"] = time
+                    result[contract]["exit_price"] = open_price
+                else:
+                    pass
     
-    
-    
-    
-    # for sym in result:
-    #     entryPrice = result[sym]["entry_price"]
-    #     exitPrice = result[sym]["exit_price"]
-
-    #     for action, target, stop_los in zip(tread_actions, targetList, stop_lossList):
-
-    # print(target_prices)
-    # print(stop_lose_prices)
     
     print(result)
 
@@ -371,8 +374,8 @@ def start_backtest():
     spot_price_symbol = "NIFTY-I"
     index = "NIFTY"
     date_range = ["08032023", "10032023"]
-    entry_time = ["10:30:00", "10:30:00", "10:30:00"]
-    exit_time = ["14:30:00", "14:30:00", "14:30:00"]
+    entry_time = ["10:10:00", "10:00:00", "10:30:00"]
+    exit_time = ["11:10:00", "11:20:00", "11:30:00"]
     target = [5, 5, 10]
     stop_loss = [2, 2, 5]
     tread_actions = ["BUY", "SELL", "BUY"]
