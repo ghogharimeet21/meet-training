@@ -97,7 +97,7 @@ def load_data(paths, spot_price_symbol, index) -> dict:
                                 "available_strikes": [],
                                 "available_expiries": [],
                             },
-                            "NIFTY-I": {},
+                            f"{spot_price_symbol}": {},
                         }
                     # Intialize symbol.
                     if symbol not in dataset_mapper[date]["CE"]:
@@ -128,7 +128,7 @@ def load_data(paths, spot_price_symbol, index) -> dict:
                                 "available_strikes": [],
                                 "available_expiries": [],
                             },
-                            "NIFTY-I": {},
+                            f"{spot_price_symbol}": {},
                         }
                     # Intialize symbol.
                     if symbol not in dataset_mapper[date]["PE"]:
@@ -159,7 +159,7 @@ def load_data(paths, spot_price_symbol, index) -> dict:
                                 "available_strikes": [],
                                 "available_expiries": [],
                             },
-                            "NIFTY-I": {},
+                            f"{spot_price_symbol}": {},
                         }
 
                     # initialize time
@@ -251,7 +251,7 @@ def get_monthly_expiry(date_list: list, date_fomat="%d%b%y"):
     currunt_month_list = list(
         set([date for date in date_objs if date.month == currunt_month])
     )
-    return datetime.strftime(currunt_month[-1], date_fomat).upper()
+    return datetime.strftime(currunt_month_list[-1], date_fomat).upper()
 
 
 def sort_dates(date_format: str, date_list: list):
@@ -297,29 +297,92 @@ def find_symbol(
         expiry = available_expiries[1]
 
     elif expiry_type == "MONTHLY":
-        # expiry = get_monthly_expiry(available_expiries)
-        pass
+        expiry = get_monthly_expiry(available_expiries)
 
     if (not strike) or (not expiry):
         return
 
-    return index + strike + expiry + opt_type
+    return index + expiry + strike + opt_type
+
+def get_startagy_entry_exit_time(entry_time:list, exit_time:list):
+    entry_objs = [datetime.strptime(time, "%H%M%S") for time in entry_time]
+    exit_objs = [datetime.strptime(time, "%H%M%S") for time in exit_time]
+
+    return min(entry_objs), max(exit_objs)
+
+def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targetList, stop_lossList):
+    result = {}
+
+
+    for ent, ext, con in zip(entry_time, exit_time, contracts):
+        option_type = con[-2:]
+        for currunt_date in datset_mapper:
+            for segment in datset_mapper[currunt_date]:
+                if option_type == segment:
+                    for symbol in datset_mapper[currunt_date][segment]:
+                        if symbol == con:
+                            if con not in result:
+                                result[symbol] = {}
+
+                            for time in datset_mapper[currunt_date][segment][symbol]:
+                            # min_entry_time, max_exit_time = get_startagy_entry_exit_time(entry_time, exit_time)
+                            # for time in range(min_entry_time, max_exit_time):
+                                open_price = float(datset_mapper[currunt_date][segment][symbol][time][0])
+                                high_price = float(datset_mapper[currunt_date][segment][symbol][time][1])
+                                low_price = float(datset_mapper[currunt_date][segment][symbol][time][2])
+                                if time == ent:
+                                    if time not in result[symbol]:
+                                        result[symbol]["entry_time"] = time
+                                        result[symbol]["entry_price"] = open_price
+                                elif time == ext:
+                                    if time not in result[symbol]:
+                                        result[symbol]["exit_time"] = time
+                                        result[symbol]["exit_price"] = open_price
+                                        result[symbol]["exit_reason"] = "normal exit"
+                                else:
+                                    if "entry_price" in result[symbol].keys():
+                                        for action, target, stoploss in zip(tread_actions, targetList, stop_lossList):
+                                                target_price = result[symbol]["entry_price"] + target if action == "BUY" else result[symbol]["entry_price"] - target
+                                                stop_loss_price = result[symbol]["entry_price"] - stoploss if action == "BUY" else result[symbol]["entry_price"] + stoploss
+                                                result[symbol]["target"] = float(target_price)
+                                                result[symbol]["stop_loss"] = float(stop_loss_price)
+                                    else:
+                                        continue
+                                    ...
+
+    
+    
+    
+    
+    # for sym in result:
+    #     entryPrice = result[sym]["entry_price"]
+    #     exitPrice = result[sym]["exit_price"]
+
+    #     for action, target, stop_los in zip(tread_actions, targetList, stop_lossList):
+
+    # print(target_prices)
+    # print(stop_lose_prices)
+    
+    print(result)
+
 
 
 def start_backtest():
     spot_price_symbol = "NIFTY-I"
     index = "NIFTY"
     date_range = ["08032023", "10032023"]
-    entry_time = ["10:30:00", "9:45:00"]
-    exit_time = ["14:30:00", "15:15:00"]
-    trade_option = ["BUY", "SELL"]
-    option_type = ["PE", "CE"]
-    strike = ["ATM", "ATM+1"]
-    expiries = ["WEEKLY", "NEXT_WEEKLY"]
+    entry_time = ["10:30:00", "10:30:00", "10:30:00"]
+    exit_time = ["14:30:00", "14:30:00", "14:30:00"]
+    target = [5, 5, 10]
+    stop_loss = [2, 2, 5]
+    tread_actions = ["BUY", "SELL", "BUY"]
+    option_type = ["CE", "PE", "CE"]
+    strike = ["ATM", "ATM+2", "ATM-2"]
+    expiries = ["WEEKLY", "MONTHLY", "MONTHLY"]
 
     if (
         (len(entry_time) != len(exit_time))
-        or (len(trade_option) != len(option_type))
+        or (len(tread_actions) != len(option_type))
         or (len(strike) != len(expiries))
     ):
         raise "Please check all inPEs"
@@ -332,7 +395,7 @@ def start_backtest():
     dataset_mapper = load_data(paths, spot_price_symbol, index)
 
     write_in_jsonFile(dataset_mapper, "outputdata", "dataset_mapper")
-    # ---------------------------------------------------------------------
+
     for current_date in dataset_mapper:
         spot_prices = []
         for i, ent_time in enumerate(entry_time):
@@ -365,33 +428,12 @@ def start_backtest():
             )
             contracts.append(contract)
 
-        print(contracts)
 
-    # ---------------------------------------------------------------------
-    # spot_prices = []
-    # nearest_strike_to_spot = []
-    # for ent_time, ext_time, action, option, strike_type, expiry_type in zip(entry_time, exit_time, trade_option, option_type, strike, expiry):
+    get_pNl(dataset_mapper, entry_time, exit_time, contracts, tread_actions, target, stop_loss)
 
-    #     for date in dataset_mapper:
-    #         spot_prices.append(get_spot_price(spot_price_symbol, dataset_mapper[date], ent_time))
 
-    # # get nearest to spot_price
-    # for date in dataset_mapper:
-    #     for segment in dataset_mapper[date]:
-    #         if segment == "PE_DETAILS":
-    #             for options in dataset_mapper[date][segment]:
-    #                 # print(options)
 
-    #                 if options == "available_strikes":
-    #                     strikes = dataset_mapper[date][segment][options]
 
-    #                     symbol = find_symbol(dataset_mapper[date], index, strike_type, )
-    #                     ...
-    #                 ...
-    #             ...
-
-    # print("Spot Prices", spot_prices)
-    # print("nearest strikes to spot", nearest_strike_to_spot)
 
 
 if __name__ == "__main__":
