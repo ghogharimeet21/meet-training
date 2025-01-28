@@ -244,13 +244,12 @@ def extract_expiry(data, symbol, option_type, date_format="%d%b%y"):
     return weekly_exp, monthly_exp
 
 
-def get_monthly_expiry(date_list: list, date_fomat="%d%b%y"):
+def get_monthly_expiry(date_list: list, date_fomat):
     date_objs = [datetime.strptime(date, date_fomat) for date in date_list]
     weekly = date_objs[0]
     currunt_month = weekly.month
-    currunt_month_list = list(
-        set([date for date in date_objs if date.month == currunt_month])
-    )
+    currunt_month_list = [date for date in date_objs if date.month == currunt_month]
+
     return datetime.strftime(currunt_month_list[-1], date_fomat).upper()
 
 
@@ -297,7 +296,7 @@ def find_symbol(
         expiry = available_expiries[1]
 
     elif expiry_type == "MONTHLY":
-        expiry = get_monthly_expiry(available_expiries)
+        expiry = get_monthly_expiry(available_expiries, "%d%b%y")
 
     if (not strike) or (not expiry):
         return
@@ -310,30 +309,47 @@ def get_startagy_entry_exit_time(entry_time:list, exit_time:list):
 
     return min(entry_objs), max(exit_objs)
 
-def get_available_time_range(date_range: list, date_format: str):
-    """Generate a list of dates between a given range."""
-    if len(date_range) > 2:
-        print(date_range[2:], "out of range")
+def get_available_time_range(time_range: list, time_format: str):
+    """Generate a list of time between a given range of time and format."""
+    if len(time_range) > 2:
+        print(time_range[2:], "out of range")
         raise "please enter a date in range of 2......"
 
-    from_date = datetime.strptime(date_range[0], date_format)
-    to_date = datetime.strptime(date_range[1], date_format)
-    dates = []
+    from_date = datetime.strptime(time_range[0], time_format)
+    to_date = datetime.strptime(time_range[1], time_format)
+    time = []
     while from_date <= to_date:
-        dates.append(datetime.strftime(from_date, date_format))
+        time.append(datetime.strftime(from_date, time_format))
         from_date += timedelta(minutes=1)
-    return dates
+    return time
+
+def get_percent(action, inverstmest, currunt_price):
+    if action == "BUY":
+        return round(( (currunt_price - inverstmest) * 100) / inverstmest, 2)
+    elif action == "SELL":
+        return round(( (inverstmest - currunt_price) * 100) / inverstmest, 2)
+
+def get_overall(result, target, stoploss):
+    total_investment = 0
+    overall_target = 0
+    overall_stop_loss = 0
+    for i, price in enumerate(target):
+        for element in result:
+            entry_price = result[element]["entry_price"]
+            total_investment += entry_price
+
+            overall_target += (entry_price + target[i])
+            overall_stop_loss -= (entry_price - stoploss[i])
+
 
 def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targetList, stop_lossList):
     result = {}
-    print("contracts.", contracts)
-
-        
 
     min_entry_time, max_exit_time = get_startagy_entry_exit_time(entry_time, exit_time)
-    time_range = get_available_time_range([datetime.strftime(min_entry_time, "%H:%M:%S"), datetime.strftime(max_exit_time, "%H:%M:%S")], "%H:%M:%S")
+    list_of_time_range = [datetime.strftime(min_entry_time, "%H:%M:%S"), datetime.strftime(max_exit_time, "%H:%M:%S")]
+    time_range = get_available_time_range(list_of_time_range, "%H:%M:%S")
 
-
+    total_investment = None
     for currunt_date in datset_mapper:
         # Loop over time_span.
         for time in time_range:
@@ -345,15 +361,20 @@ def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targ
                 open_price = float(datset_mapper[currunt_date][option_type][contract][time][0])
                 high_price = float(datset_mapper[currunt_date][option_type][contract][time][1])
                 low_price = float(datset_mapper[currunt_date][option_type][contract][time][2])
+                close_price = float(datset_mapper[currunt_date][option_type][contract][time][3])
                 if time == leg_entry_time:
                     if contract not in result:
                         result[contract] = {
-                            "contract_symbol": contract,
                             "entry_time": None,
                             "entry_price": None,
                             "exit_time": None,
                             "exit_price": None,
-                            "pnl":None
+                            "exit_reason": None,
+                            "target_price":None,
+                            "target_hitt": None,
+                            "target_stoploss":None,
+                            "target_stoploss_hitt": None,
+                            "pnl": None,
                         }
                     result[contract]["entry_time"] = time
                     result[contract]["entry_price"] = open_price
@@ -361,12 +382,52 @@ def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targ
                     if contract not in result:
                         continue
                     result[contract]["exit_time"] = time
-                    result[contract]["exit_price"] = open_price
+                    result[contract]["exit_price"] = close_price
+                    result[contract]["exit_reason"] = "Normal Exit"
                 else:
-                    pass
+                    if contract not in result:
+                        continue
+                    elif result[contract]["entry_price"] != None:
+                        leg_investment = result[contract]["entry_price"]
+                        target_price = leg_investment + targetList[i] if tread_actions[i] == "BUY" else result[contract]["entry_price"] - stop_lossList[i]
+
+                        stop_loss_price = result[contract]["entry_price"] - stop_lossList[i] if tread_actions[i] == "BUY" else result[contract]["entry_price"] + stop_lossList[i]
+                        result[contract]["target_price"] = target_price
+                        result[contract]["targert_stoploss"] = stop_loss_price
+
+                        result[contract]["action"] = tread_actions[i]
+
+
+                        if tread_actions[i] == "BUY":
+                            if high_price >= target_price:
+                                result[contract]["exit_time"] = time
+                                result[contract]["exit_price"] = high_price
+                                result[contract]["exit_reason"] = "Individual Target Hitt"
+                                result[contract]["target_hitt"] = high_price
+                                break
+                            elif low_price >= stop_loss_price:
+                                result[contract]["exit_time"] = time
+                                result[contract]["exit_price"] = low_price
+                                result[contract]["exit_reason"] = "Individual Stop Loss Hitt"
+                                result[contract]["target_hitt"] = low_price
+                                break
+                        elif tread_actions[i] == "SELL":
+                            if low_price >= stop_loss_price:
+                                result[contract]["exit_time"] = time
+                                result[contract]["exit_price"] = high_price
+                                result[contract]["exit_reason"] = "Individual Target Hitt"
+                                result[contract]["target_hitt"] = low_price
+                                break
+                            elif high_price <= target_price:
+                                result[contract]["exit_time"] = time
+                                result[contract]["exit_price"] = low_price
+                                result[contract]["exit_reason"] = "Individual Stop Loss Hitt"
+                                result[contract]["target_hitt"] = high_price
+                                break
+                    ...
     
     
-    print(result)
+    return result
 
 
 
@@ -374,14 +435,16 @@ def start_backtest():
     spot_price_symbol = "NIFTY-I"
     index = "NIFTY"
     date_range = ["08032023", "10032023"]
-    entry_time = ["10:10:00", "10:00:00", "10:30:00"]
-    exit_time = ["11:10:00", "11:20:00", "11:30:00"]
-    target = [5, 5, 10]
-    stop_loss = [2, 2, 5]
-    tread_actions = ["BUY", "SELL", "BUY"]
-    option_type = ["CE", "PE", "CE"]
-    strike = ["ATM", "ATM+2", "ATM-2"]
-    expiries = ["WEEKLY", "MONTHLY", "MONTHLY"]
+    entry_time = ["10:10:00", "10:00:00"]
+    exit_time = ["11:10:00", "11:20:00"]
+    overall_target = []
+    overall_stop_loss = []
+    target = [2, 2]
+    stop_loss = [1, 1]
+    tread_actions = ["BUY", "SELL"]
+    option_type = ["CE", "PE"]
+    strike = ["ATM", "ATM+1"]
+    expiries = ["WEEKLY", "MONTHLY"]
 
     if (
         (len(entry_time) != len(exit_time))
@@ -432,7 +495,11 @@ def start_backtest():
             contracts.append(contract)
 
 
-    get_pNl(dataset_mapper, entry_time, exit_time, contracts, tread_actions, target, stop_loss)
+    result = get_pNl(dataset_mapper, entry_time, exit_time, contracts, tread_actions, target, stop_loss)
+
+    total_investment = get_overall(result, overall_target, overall_stop_loss)
+
+    write_in_jsonFile(result, "outputdata", "final_output")
 
 
 
