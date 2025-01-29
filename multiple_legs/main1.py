@@ -173,10 +173,9 @@ def load_data(paths, spot_price_symbol, index) -> dict:
                         close_price,
                     ]
 
-        symbols = []
+    symbols = []
     for date in dataset_mapper:
         for type in dataset_mapper[date]:
-            # print(type)
             for symbol in dataset_mapper[date][type]:
                 symbols.append(symbol)
 
@@ -329,21 +328,12 @@ def get_percent(action, inverstmest, currunt_price):
     elif action == "SELL":
         return round(( (inverstmest - currunt_price) * 100) / inverstmest, 2)
 
-def get_overall(result, target, stoploss):
-    total_investment = 0
-    overall_target = 0
-    overall_stop_loss = 0
-    for i, price in enumerate(target):
-        for element in result:
-            entry_price = result[element]["entry_price"]
-            total_investment += entry_price
 
-            overall_target += (entry_price + target[i])
-            overall_stop_loss -= (entry_price - stoploss[i])
 
 
 def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targetList, stop_lossList):
     result = {}
+
 
     min_entry_time, max_exit_time = get_startagy_entry_exit_time(entry_time, exit_time)
     list_of_time_range = [datetime.strftime(min_entry_time, "%H:%M:%S"), datetime.strftime(max_exit_time, "%H:%M:%S")]
@@ -366,21 +356,22 @@ def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targ
                     if contract not in result:
                         result[contract] = {
                             "entry_time": None,
-                            "entry_price": None,
                             "exit_time": None,
+                            "entry_price": None,
                             "exit_price": None,
                             "exit_reason": None,
-                            "target_price":None,
-                            "target_hitt": None,
-                            "target_stoploss":None,
-                            "target_stoploss_hitt": None,
-                            "pnl": None,
+                            "target_price": None,
+                            "targert_stoploss": None,
+                            "action": None,
+                            "currunt_close_price": close_price
                         }
                     result[contract]["entry_time"] = time
                     result[contract]["entry_price"] = open_price
                 elif time == leg_exit_time:
                     if contract not in result:
                         continue
+                    if result[contract]["exit_reason"] is not None:
+                        break
                     result[contract]["exit_time"] = time
                     result[contract]["exit_price"] = close_price
                     result[contract]["exit_reason"] = "Normal Exit"
@@ -390,8 +381,8 @@ def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targ
                     elif result[contract]["entry_price"] != None:
                         leg_investment = result[contract]["entry_price"]
                         target_price = leg_investment + targetList[i] if tread_actions[i] == "BUY" else result[contract]["entry_price"] - stop_lossList[i]
-
                         stop_loss_price = result[contract]["entry_price"] - stop_lossList[i] if tread_actions[i] == "BUY" else result[contract]["entry_price"] + stop_lossList[i]
+
                         result[contract]["target_price"] = target_price
                         result[contract]["targert_stoploss"] = stop_loss_price
 
@@ -403,29 +394,34 @@ def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targ
                                 result[contract]["exit_time"] = time
                                 result[contract]["exit_price"] = high_price
                                 result[contract]["exit_reason"] = "Individual Target Hitt"
-                                result[contract]["target_hitt"] = high_price
+                                result[contract]["P&L"] = round(high_price - result[contract]["entry_price"], 2)
                                 break
                             elif low_price >= stop_loss_price:
                                 result[contract]["exit_time"] = time
                                 result[contract]["exit_price"] = low_price
                                 result[contract]["exit_reason"] = "Individual Stop Loss Hitt"
-                                result[contract]["target_hitt"] = low_price
+                                result[contract]["P&L"] = round(low_price - result[contract]["entry_price"], 2)
                                 break
                         elif tread_actions[i] == "SELL":
-                            if low_price >= stop_loss_price:
-                                result[contract]["exit_time"] = time
-                                result[contract]["exit_price"] = high_price
-                                result[contract]["exit_reason"] = "Individual Target Hitt"
-                                result[contract]["target_hitt"] = low_price
-                                break
-                            elif high_price <= target_price:
+                            if high_price >= stop_loss_price:
                                 result[contract]["exit_time"] = time
                                 result[contract]["exit_price"] = low_price
-                                result[contract]["exit_reason"] = "Individual Stop Loss Hitt"
-                                result[contract]["target_hitt"] = high_price
+                                result[contract]["exit_reason"] = "Individual stop loss hitt"
+                                result[contract]["P&L"] = round(result[contract]["entry_price"] - high_price, 2)
                                 break
-                    ...
-    
+                            elif low_price <= target_price:
+                                result[contract]["exit_time"] = time
+                                result[contract]["exit_price"] = low_price
+                                result[contract]["exit_reason"] = "Individual target hitt"
+                                result[contract]["P&L"] = round(result[contract]["entry_price"] - low_price, 2)
+                                break
+                                
+
+            # # statagy level for overall
+            # for i, price in enumerate(entry_time):
+
+            #     ...
+
     
     return result
 
@@ -435,13 +431,13 @@ def start_backtest():
     spot_price_symbol = "NIFTY-I"
     index = "NIFTY"
     date_range = ["08032023", "10032023"]
-    entry_time = ["10:10:00", "10:00:00"]
-    exit_time = ["11:10:00", "11:20:00"]
-    overall_target = []
-    overall_stop_loss = []
-    target = [2, 2]
-    stop_loss = [1, 1]
-    tread_actions = ["BUY", "SELL"]
+    entry_time = ["09:30:00", "09:30:00"]
+    exit_time = ["14:10:00", "14:10:00"]
+    target = [5, 5]
+    stop_loss = [10, 10]
+    overall_target = 100
+    overall_stoploss = 50
+    tread_actions = ["BUY", "BUY"]
     option_type = ["CE", "PE"]
     strike = ["ATM", "ATM+1"]
     expiries = ["WEEKLY", "MONTHLY"]
@@ -451,7 +447,7 @@ def start_backtest():
         or (len(tread_actions) != len(option_type))
         or (len(strike) != len(expiries))
     ):
-        raise "Please check all inPEs"
+        raise "Please check all inputs"
 
     dates = get_available_dates(date_range=date_range, date_format="%d%m%Y")
 
@@ -462,8 +458,10 @@ def start_backtest():
 
     write_in_jsonFile(dataset_mapper, "outputdata", "dataset_mapper")
 
+    
+    spot_prices = []
+    contracts = []
     for current_date in dataset_mapper:
-        spot_prices = []
         for i, ent_time in enumerate(entry_time):
             opt_type = option_type[i]
 
@@ -471,7 +469,7 @@ def start_backtest():
                 if time == ent_time:
                     spot_prices.append(index_prices[0])
 
-        contracts = []
+        
         for i, spot_price in enumerate(spot_prices):
             opt_type = option_type[i]
             expiry_type = expiries[i]
@@ -494,12 +492,12 @@ def start_backtest():
             )
             contracts.append(contract)
 
+    print(contracts, "CONTRACTS >>>")
 
     result = get_pNl(dataset_mapper, entry_time, exit_time, contracts, tread_actions, target, stop_loss)
 
-    total_investment = get_overall(result, overall_target, overall_stop_loss)
+    write_in_jsonFile(result, "outputdata", "final_result")
 
-    write_in_jsonFile(result, "outputdata", "final_output")
 
 
 

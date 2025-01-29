@@ -1,26 +1,26 @@
 {
-    "NIFTY09MAR2317700PE": {
-        "entry_time": "9:45:00",
-        "entry_price": 81.75,
-        "exit_time": "15:15:00",
-        "exit_price": 25.05
-    },
     "NIFTY09MAR2317750CE": {
-        "entry_time": "9:45:00",
-        "entry_price": 23.05,
-        "exit_time": "15:15:00",
-        "exit_price": 42.9
+        "entry_time": "10:00:00",
+        "exit_time": "14:09:00",
+        "entry_price": 28.4,
+        "exit_price": 28.8,
+        "exit_reason": "Individual Stop Loss Hitt",
+        "target_price": 33.4,
+        "targert_stoploss": 18.4,
+        "action": "BUY",
+        "currunt_close_price": 28.55,
+        "P&L": 0.4
     },
-    "NIFTY29MAR2317700PE": {
-        "entry_time": "9:45:00",
-        "entry_price": 183.7,
-        "exit_time": "15:15:00",
-        "exit_price": 147.75
-    },
-    "NIFTY29MAR2317750CE": {
-        "entry_time": "9:45:00",
-        "entry_price": 172.55,
-        "exit_time": "15:15:00",
-        "exit_price": 210.65
+    "NIFTY29MAR2317800PE": {
+        "entry_time": "10:00:00",
+        "exit_time": "12:53:00",
+        "entry_price": 220.8,
+        "exit_price": 228.0,
+        "exit_reason": "Individual Target Hitt",
+        "target_price": 225.8,
+        "targert_stoploss": 210.8,
+        "action": "BUY",
+        "currunt_close_price": 220.3,
+        "P&L": 7.2
     }
 }
