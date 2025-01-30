@@ -335,8 +335,6 @@ def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targ
     min_entry_time, max_exit_time = get_startagy_entry_exit_time(entry_time, exit_time)
     time_range = get_available_time_range([datetime.strftime(min_entry_time, "%H:%M:%S"), datetime.strftime(max_exit_time, "%H:%M:%S")], "%H:%M:%S")
 
-    total_investment = []
-    all_legs_prices = []
 
     for currunt_date in datset_mapper:
         # Loop over time_span.
