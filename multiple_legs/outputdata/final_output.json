@@ -1,0 +1,27 @@
+{
+    "overall": {
+        "overall_investment": 250.9
+    },
+    "NIFTY09MAR2317750CE": {
+        "entry_time": "11:00:00",
+        "exit_time": null,
+        "entry_price": 30.95,
+        "exit_price": 29.2,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": null,
+        "target_stoploss": null,
+        "pnl": null,
+        "currunt_close_price": 29.2
+    },
+    "NIFTY29MAR2317800PE": {
+        "entry_time": "11:00:00",
+        "exit_time": null,
+        "entry_price": 219.95,
+        "exit_price": 222.15,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": null,
+        "target_stoploss": null,
+        "pnl": null,
+        "currunt_close_price": 222.15
+    }
+}

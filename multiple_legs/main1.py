@@ -18,9 +18,9 @@ def convert_dateformat(date, format, to_format):
     return datetime.strftime(datetime.strptime(date, format), to_format)
 
 
-def write_in_jsonFile(result, outputpath, fileName):
+def write_in_jsonFile(result, fileName):
     jsondata = json.dumps(result, indent=4)
-    with open(f"./{outputpath}/{fileName}.json", "w") as file:
+    with open(f"./outputdata/{fileName}", "w") as file:
         file.write(jsondata)
 
 
@@ -258,17 +258,6 @@ def sort_dates(date_format: str, date_list: list):
     ]
 
 
-def get_spot_price(spot_price_symbol, datset_mapper, entry_time):
-    spot_price = None
-    for date in datset_mapper:
-        for segment in datset_mapper[date]:
-            if segment == spot_price_symbol:
-                for symbol in datset_mapper[segment]:
-                    for time in datset_mapper[segment][symbol]:
-                        if time == entry_time:
-                            spot_price = float(datset_mapper[segment][symbol][time][0])
-    return spot_price
-
 
 def find_symbol(
     index,
@@ -327,16 +316,49 @@ def get_percent(action, inverstmest, currunt_price):
     elif action == "SELL":
         return round(( (inverstmest - currunt_price) * 100) / inverstmest, 2)
 
+def get_targets(result, contracts):
+    total_investment = 0
+    for contract in contracts:
+        total_investment += result[contract]["entry_price"]
+
+    return round(total_investment, 2)
 
 
-def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targetList, stop_lossList, total_target, total_stoploss):
+def get_overall_sl_tgt(result, contracts, total_investment, overall_target, overall_stoploss):
+    total_currunt_value = 0
+    for inst in contracts:
+        if result[inst]["exit_price"]:
+            total_currunt_value += result[inst]["exit_price"]
+        else:
+            total_currunt_value += result[inst]["currunt_close_price"]
+    chnage_in_investment = total_currunt_value - total_investment
+
+    if chnage_in_investment >= overall_target:
+        for inst in contracts:
+            if result[inst]["exit_price"] == None:
+                result[inst]["exit_price"] = result[inst]["currunt_close_price"]
+                result[inst]["exit_reason"] = "Overall Target Hitt"
+        return True, result
+    elif chnage_in_investment <= overall_stoploss:
+        for inst in contracts:
+            if result[inst]["exit_price"] == None:
+                result[inst]["exit_price"] = result[inst]["currunt_close_price"]
+                result[inst]["exit_reason"] = "Overall Stoploss Hitt"
+        return True, result
+    else:
+        return False, result
+
+def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targetList, stop_lossList, overall_target, overall_stoploss):
     result = {}
 
     min_entry_time, max_exit_time = get_startagy_entry_exit_time(entry_time, exit_time)
     time_range = get_available_time_range([datetime.strftime(min_entry_time, "%H:%M:%S"), datetime.strftime(max_exit_time, "%H:%M:%S")], "%H:%M:%S")
 
+    call_at_ones = True
 
     for currunt_date in datset_mapper:
+        if currunt_date not in result:
+            result[currunt_date] = {}
         # Loop over time_span.
         for time in time_range:
             # Loop over legs.
@@ -349,9 +371,9 @@ def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targ
                 low_price = float(datset_mapper[currunt_date][option_type][contract][time][2])
                 close_price = float(datset_mapper[currunt_date][option_type][contract][time][3])
                 if time == leg_entry_time:
-                    if contract not in result:
-                        result[contract] = {
-                            "contract_symbol": contract,
+                    if contract not in result[currunt_date]:
+                        result[currunt_date]["overall"] = {}
+                        result[currunt_date][contract] = {
                             "entry_time": None,
                             "exit_time": None,
                             "entry_price": None,
@@ -361,58 +383,66 @@ def get_pNl(datset_mapper, entry_time, exit_time, contracts, tread_actions, targ
                             "target_stoploss":None,
                             "pnl": None,
                         }
-                    result[contract]["entry_time"] = time
-                    result[contract]["entry_price"] = open_price
-                    total_investment.append(open_price)
+                    result[currunt_date][contract]["entry_time"] = time
+                    result[currunt_date][contract]["entry_price"] = open_price
+                    result[currunt_date][contract]["currunt_close_price"] = close_price
                 elif time == leg_exit_time:
-                    if contract not in result:
-                        continue
                     if result[contract]["exit_reason"] is not None:
                         break
-                    result[contract]["exit_time"] = time
-                    result[contract]["exit_price"] = open_price
+                    result[currunt_date][contract]["exit_time"] = time
+                    result[currunt_date][contract]["exit_price"] = open_price
+                    result[currunt_date][contract]["currunt_close_price"] = close_price
                 else:
-                    if contract not in result:
-                        continue
-                    elif result[contract]["entry_price"] != None:
-                        leg_investment = result[contract]["entry_price"]
-                        target_price = leg_investment + targetList[i] if tread_actions[i] == "BUY" else result[contract]["entry_price"] - stop_lossList[i]
+                    if result[currunt_date][contract]["entry_price"] != None:
+                        leg_investment = result[currunt_date][contract]["entry_price"]
+                        target_price = leg_investment + targetList[i] if tread_actions[i] == "BUY" else leg_investment - stop_lossList[i]
 
-                        stop_loss_price = result[contract]["entry_price"] - stop_lossList[i] if tread_actions[i] == "BUY" else result[contract]["entry_price"] + stop_lossList[i]
-                        result[contract]["target_price"] = target_price
-                        result[contract]["target_stoploss"] = stop_loss_price
+                        stop_loss_price = leg_investment - stop_lossList[i] if tread_actions[i] == "BUY" else leg_investment + stop_lossList[i]
+                        result[currunt_date][contract]["target_price"] = target_price
+                        result[currunt_date][contract]["target_stoploss"] = stop_loss_price
 
-                        result[contract]["action"] = tread_actions[i]
+                        result[currunt_date][contract]["action"] = tread_actions[i]
 
 
                         if tread_actions[i] == "BUY":
                             if high_price >= target_price:
-                                result[contract]["exit_time"] = time
-                                result[contract]["exit_price"] = high_price
-                                result[contract]["exit_reason"] = "Individual Target Hitt"
-                                result[contract]["pnl"] = round(high_price - result[contract]["entry_price"], 2)
+                                result[currunt_date][contract]["exit_time"] = time
+                                result[currunt_date][contract]["exit_price"] = high_price
+                                result[currunt_date][contract]["exit_reason"] = "Individual Target Hitt"
+                                result[currunt_date][contract]["pnl"] = round(high_price - leg_investment, 2)
+                                result[currunt_date][contract]["currunt_close_price"] = close_price
                                 break
                             elif low_price <= stop_loss_price:
-                                result[contract]["exit_time"] = time
-                                result[contract]["exit_price"] = low_price
-                                result[contract]["exit_reason"] = "Individual Stop Loss Hitt"
-                                result[contract]["pnl"] = round(low_price - result[contract]["entry_price"], 2)
+                                result[currunt_date][contract]["exit_time"] = time
+                                result[currunt_date][contract]["exit_price"] = low_price
+                                result[currunt_date][contract]["exit_reason"] = "Individual Stop Loss Hitt"
+                                result[currunt_date][contract]["pnl"] = round(low_price - leg_investment, 2)
+                                result[currunt_date][contract]["currunt_close_price"] = close_price
                                 break
                         elif tread_actions[i] == "SELL":
                             if high_price >= stop_loss_price:
-                                result[contract]["exit_time"] = time
-                                result[contract]["exit_price"] = high_price
-                                result[contract]["exit_reason"] = "Individual Stoploss Hitt"
-                                result[contract]["pnl"] = round(result[contract]["entry_price"] - high_price, 2)
+                                result[currunt_date][contract]["exit_time"] = time
+                                result[currunt_date][contract]["exit_price"] = high_price
+                                result[currunt_date][contract]["exit_reason"] = "Individual Stoploss Hitt"
+                                result[currunt_date][contract]["pnl"] = round(leg_investment - high_price, 2)
+                                result[currunt_date][contract]["currunt_close_price"] = close_price
                                 break
                             elif low_price <= target_price:
-                                result[contract]["exit_time"] = time
-                                result[contract]["exit_price"] = low_price
-                                result[contract]["exit_reason"] = "Individual Target Hitt"
-                                result[contract]["pnl"] = round(result[contract]["entry_price"] - low_price, 2)
+                                result[currunt_date][contract]["exit_time"] = time
+                                result[currunt_date][contract]["exit_price"] = low_price
+                                result[currunt_date][contract]["exit_reason"] = "Individual Target Hitt"
+                                result[currunt_date][contract]["pnl"] = round(leg_investment - low_price, 2)
+                                result[currunt_date][contract]["currunt_close_price"] = close_price
                                 break
-        # for overall
-        result["total_investment"] = round(sum(total_investment), 2)
+            if call_at_ones:
+                total_investment = get_targets(result[currunt_date], contracts)
+                result[currunt_date]["overall"]["overall_investment"] = total_investment
+                call_at_ones = False
+            is_sq_off, result = get_overall_sl_tgt(result[currunt_date], contracts, total_investment, overall_target, overall_stoploss)
+
+            if is_sq_off:
+                break
+
 
     return result
 
@@ -422,8 +452,8 @@ def start_backtest():
     spot_price_symbol = "NIFTY-I"
     index = "NIFTY"
     date_range = ["08032023", "10032023"]
-    entry_time = ["10:10:00", "10:00:00"]
-    exit_time = ["14:10:00", "11:20:00"]
+    entry_time = ["11:00:00", "11:00:00"]
+    exit_time = ["13:30:00", "13:30:00"]
     overall_target = 100
     overall_stop_loss = 50
     target = [2, 2]
@@ -447,7 +477,7 @@ def start_backtest():
     # got data according to inPE option_type in a list
     dataset_mapper = load_data(paths, spot_price_symbol, index)
 
-    write_in_jsonFile(dataset_mapper, "outputdata", "dataset_mapper")
+    write_in_jsonFile(dataset_mapper, "dataset_mapper")
 
     
     spot_prices = []
@@ -488,10 +518,7 @@ def start_backtest():
 
     print(result)
 
-    # get_pNl(dataset_mapper, entry_time, exit_time, contracts, tread_actions, target, stop_loss, overall_target, overall_stop_loss)
-
-
-    write_in_jsonFile(result, "outputdata", "final_output")
+    write_in_jsonFile(result, "final_output.json")
 
 
 
