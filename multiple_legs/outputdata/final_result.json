@@ -21,7 +21,7 @@
             "exit_price": 271.85,
             "exit_reason": "Overall Stoploss Hitt",
             "target_price": 373.65,
-            "stoploss_price": 173.64999999999998,
+            "stoploss_price": 173.65,
             "P&L": null,
             "currunt_close_price": 271.85,
             "action": "BUY"

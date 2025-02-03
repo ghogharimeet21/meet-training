@@ -29538,4 +29538,5912 @@
         "action": "BUY"
     },
     "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
+}{
+    "NIFTY09MAR2317900CE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 4.55,
+        "exit_price": 4.6,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 104.55,
+        "stoploss_price": -95.45,
+        "P&L": null,
+        "currunt_close_price": 4.6,
+        "action": "BUY"
+    },
+    "NIFTY09MAR2317950PE": {
+        "entry_date": "3/8/2023",
+        "entry_time": "10:00:00",
+        "exit_time": "10:00:00",
+        "entry_price": 273.65,
+        "exit_price": 271.85,
+        "exit_reason": "Overall Stoploss Hitt",
+        "target_price": 373.65,
+        "stoploss_price": 173.65,
+        "P&L": null,
+        "currunt_close_price": 271.85,
+        "action": "BUY"
+    },
+    "total_investment": 278.2
 }

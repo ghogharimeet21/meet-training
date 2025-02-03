@@ -203,8 +203,10 @@ def get_overall_sl_tgt(
     for inst in contracts:
         if result[inst]["exit_price"] is not None:
             total_currunt_value += result[inst]["exit_price"]
+            # print("total_currunt_value", total_currunt_value, "exit")
         else:
             total_currunt_value += result[inst]["currunt_close_price"]
+            # print("total_currunt_value", total_currunt_value, "close")
     
     chnage_in_investment = total_currunt_value - total_investment
 
@@ -214,8 +216,8 @@ def get_overall_sl_tgt(
                 result[inst]["exit_time"] = time
                 result[inst]["exit_price"] = result[inst]["currunt_close_price"]
                 result[inst]["exit_reason"] = "Overall Target Hitt"
-
         return True, result
+    
     elif chnage_in_investment <= overall_stoploss:
         for inst in contracts:
             if result[inst]["exit_price"] is None:
@@ -239,7 +241,7 @@ def get_pnl(
     stoplossList:list,
     overall_target:int,
     overall_stoploss:int
-    ):
+):
     result = {}
 
     min_entry_time, max_exit_time = get_startagy_overall_time_range(entry_times, exit_times, time_format)
@@ -277,8 +279,8 @@ def get_pnl(
                         "entry_price": open_price,
                         "exit_price": None,
                         "exit_reason": None,
-                        "target_price": open_price + target if action == "BUY" else open_price - target,
-                        "stoploss_price": open_price - stoploss if action == "BUY" else open_price + stoploss,
+                        "target_price": round(open_price + target, 2) if action == "BUY" else round(open_price - target, 2),
+                        "stoploss_price": round(open_price - stoploss, 2) if action == "BUY" else round(open_price + stoploss, 2),
                         "P&L": None,
                         "currunt_close_price": close_price,
                         "action": action
@@ -291,7 +293,7 @@ def get_pnl(
                         result[currunt_date][leg_contract]["exit_reason"] = "Normal Exit"
                         result[currunt_date][leg_contract]["P&L"] = (
                             round(result[currunt_date][leg_contract]["entry_price"] - close_price, 2)
-                            if action == "BUY" 
+                            if action == "BUY"
                             else
                             round(close_price - result[currunt_date][leg_contract]["entry_price"], 2)
                         )
@@ -352,12 +354,6 @@ def get_pnl(
                 overall_stoploss,
                 time,
             )
-            print("* "*50)
-            print(time, contracts[i])
-            print(result_x, "result_x "*5)
-            print(is_sq_off, "is_sq_off "*5)
-            write_file(result_x, "file.txt", "a")
-            print("* "*50)
 
 
     write_file(result, "final_result.json", mode="w")
@@ -375,8 +371,8 @@ def start_backtest():
     exit_time = ["13:30:00", "13:30:00"]
     overall_target = 50
     overall_stop_loss = 25
-    target = [100, 100]
-    stop_loss = [100, 100]
+    targets = [100, 100]
+    stop_loses = [100, 100]
     tread_actions = ["BUY", "BUY"]
     option_type = ["CE", "PE"]
     strike = ["ATM", "ATM+1"]
@@ -425,8 +421,8 @@ def start_backtest():
         exit_time,
         contracts,
         tread_actions,
-        target,
-        stop_loss,
+        targets,
+        stop_loses,
         overall_target,
         overall_stop_loss
     )
