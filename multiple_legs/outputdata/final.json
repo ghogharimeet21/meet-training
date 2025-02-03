@@ -1,0 +1,33 @@
+{
+    "3/8/2023": {
+        "overall": {
+            "overall_investment": 0
+        },
+        "NIFTY09MAR2317900CE": {
+            "entry_date": "3/8/2023",
+            "entry_time": "11:00:00",
+            "exit_time": "11:00:00",
+            "entry_price": 4.3,
+            "exit_price": 4.15,
+            "exit_reason": "Overall Target Hit",
+            "target_price": null,
+            "target_stoploss": null,
+            "pnl": -0.14999999999999947,
+            "currunt_close_price": 4.15,
+            "action": "BUY"
+        },
+        "NIFTY09MAR2317950PE": {
+            "entry_date": "3/8/2023",
+            "entry_time": "11:00:00",
+            "exit_time": "11:00:00",
+            "entry_price": 259.0,
+            "exit_price": 265.3,
+            "exit_reason": "Overall Target Hit",
+            "target_price": null,
+            "target_stoploss": null,
+            "pnl": 6.300000000000011,
+            "currunt_close_price": 265.3,
+            "action": "BUY"
+        }
+    }
+}
