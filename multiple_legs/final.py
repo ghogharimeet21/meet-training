@@ -77,6 +77,7 @@ def load_data(paths, spot_price_symbol, index, time_format):
             continue
         with open(path, "r") as file:
             lines = file.readlines()
+            # ['', 'Symbol', 'Date', 'Time', 'Open', 'High', 'Low', 'Close', 'Volume', 'Open Interest', 'TickTime', '', '\n']
             for line in lines[1:]:
                 values = line.strip().split(",")
                 symbol, date, time = values[1], values[2], values[3]
@@ -104,6 +105,7 @@ def load_data(paths, spot_price_symbol, index, time_format):
                     if symbol.endswith("CE")
                     else "PE" if symbol.endswith("PE") else spot_price_symbol
                 )
+                # print(option_type, "C"*50)
                 if (
                     option_type != spot_price_symbol
                 ):
@@ -114,6 +116,9 @@ def load_data(paths, spot_price_symbol, index, time_format):
                     dataset_mapper[date][option_type][symbol][time] = prices
                 else:
                     dataset_mapper[date][spot_price_symbol][time] = prices
+
+    # <><><><><><><><><>
+    write_file(dataset_mapper, "1_datset_mapper_check.json", "w")
 
     symbols = [
         symbol
@@ -216,97 +221,96 @@ def check_overall_sl_tgt(
     time,
 ):
     
-    # total_currunt_value = 0
-    # for inst in contracts:
-    #     if (
-    #         result[inst]["exit_price"]
-    #     ):
-    #         total_currunt_value += result[inst]["exit_price"]
-    #     else:
-    #         total_currunt_value += result[inst]["currunt_close_price"]
-    # chnage_in_investment = total_currunt_value - total_investment
-
-    # if (
-    #     chnage_in_investment >= overall_target
-    # ):
-    #     for inst in contracts:
-    #         if (
-    #             result[inst]["exit_price"] == None
-    #         ):
-    #             result[inst]["exit_price"] = result[inst]["currunt_close_price"]
-    #             result[inst]["exit_reason"] = "Overall Target Hitt"
-    #             result[inst]["exit_time"] = time
-    #     return True
-    # elif (
-    #     chnage_in_investment <= overall_stoploss
-    # ):
-    #     for inst in contracts:
-    #         if (
-    #             result[inst]["exit_price"] == None
-    #         ):
-    #             result[inst]["exit_price"] = result[inst]["currunt_close_price"]
-    #             result[inst]["exit_reason"] = "Overall Stoploss Hitt"
-    #             result[inst]["exit_time"] = time
-    #     return True
-    # else:
-    #     return False
-
-#############################################################################################################
-
-    total_currunt_close_value = 0
+    total_currunt_value = 0
     for inst in contracts:
         if (
             result[inst]["exit_price"] is not None
         ):
-            total_currunt_close_value += result[inst]["exit_price"]
+            total_currunt_value += result[inst]["exit_price"]
+            print(result[inst]["exit_price"], "*"*50, time) ##<<<<<<<<<<< first leg exit
         else:
-            print(result[inst]["currunt_close_price"], time)
-            total_currunt_close_value += result[inst]["currunt_close_price"]
-    
-    total_overall_target = total_investment + overall_target
-    total_overall_stoploss = total_investment - overall_stoploss
+            total_currunt_value += result[inst]["currunt_close_price"]
+        print("else "*5, total_currunt_value, time, inst)
+    chnage_in_investment = total_currunt_value - total_investment
 
-    # print("* "*50, "currun_close.txt", "a")
-    # print(f"total_currunt_close_value {total_currunt_close_value}")
-    # print(f"total_investment, {total_investment}")
-    # print(f"total_overall_target, {total_overall_target}")
-    # print(f"total_overall_stoploss, {total_overall_stoploss}")
-    # print(f"time {time}")
-    # print("* "*50, "currun_close.txt", "a")
-    # t.sleep(0.5)
 
     if (
-        total_currunt_close_value >= total_overall_target
+        chnage_in_investment >= overall_target
     ):
+        # print(time, "chnage in investment =", chnage_in_investment, ">=", "overall_target =", overall_target)
         for inst in contracts:
-            if (
-                result[inst]["exit_price"] is None
-            ):
-                result[inst]["exit_time"] = time
-                result[inst]["exit_price"] = result[inst]["currunt_close_price"]
-                result[inst]["exit_reason"] = "Overall Target Hitt"
-                result[inst]["P&L"] = round(
-                    total_investment - total_currunt_close_value, 2
-                )
+            result[inst]["exit_price"] = result[inst]["currunt_close_price"]
+            result[inst]["exit_reason"] = "Overall Target Hitt"
+            result[inst]["exit_time"] = time
         return True
-    
     elif (
-        total_currunt_close_value <= total_overall_stoploss
+        chnage_in_investment <= overall_stoploss
     ):
+        # print(time, "chnage in investment =", chnage_in_investment, "<=", "overall_stoploss =", overall_stoploss)
         for inst in contracts:
-            if (
-                result[inst]["exit_price"] is None
-            ):
-                result[inst]["exit_time"] = time
-                result[inst]["exit_price"] = result[inst]["currunt_close_price"]
-                result[inst]["exit_reason"] = "Overall Stoploss Hitt"
-                result[inst]["P&L"] = round(
-                    total_investment - total_currunt_close_value, 2
-                )
-        
+            result[inst]["exit_price"] = result[inst]["currunt_close_price"]
+            result[inst]["exit_reason"] = "Overall Stoploss Hitt"
+            result[inst]["exit_time"] = time
         return True
     else:
         return False
+
+#############################################################################################################
+
+    # total_currunt_close_value = 0
+    # for inst in contracts:
+    #     # print("contracts", contracts)
+    #     if (
+    #         result[inst]["exit_price"] is not None
+    #     ):
+    #         total_currunt_close_value += result[inst]["exit_price"]
+    #         # print(result[inst]["exit_price"], "=", time, "contract =", inst)
+    #     else:
+    #         # print(result[inst]["currunt_close_price"], "=", time, "contract =", inst)
+    #         total_currunt_close_value += result[inst]["currunt_close_price"]
+    
+    # total_overall_target = total_investment + overall_target
+    # total_overall_stoploss = total_investment - overall_stoploss
+
+    # # print("* "*50, "currun_close.txt", "a")
+    # # print(f"total_currunt_close_value {total_currunt_close_value}")
+    # # print(f"total_investment, {total_investment}")
+    # # print(f"total_overall_target, {total_overall_target}")
+    # # print(f"total_overall_stoploss, {total_overall_stoploss}")
+    # # print(f"time {time}")
+    # # print("* "*50, "currun_close.txt", "a")
+    # # t.sleep(0.5)
+
+    # if (
+    #     result[inst]["exit_price"] is None
+    # ):
+    #     if (
+    #         total_currunt_close_value >= total_overall_target
+    #     ):
+    #         for inst in contracts:
+    #             result[inst]["exit_time"] = time
+    #             result[inst]["exit_price"] = result[inst]["currunt_close_price"]
+    #             result[inst]["exit_reason"] = "Overall Target Hitt"
+    #             result[inst]["P&L"] = round(
+    #                 total_investment - total_currunt_close_value, 2
+    #             )
+    #             print("Overall Target Hitt")
+    #         return True
+
+    #     elif (
+    #         total_currunt_close_value <= total_overall_stoploss
+    #     ):
+    #         for inst in contracts:
+    #             result[inst]["exit_time"] = time
+    #             result[inst]["exit_price"] = result[inst]["currunt_close_price"]
+    #             result[inst]["exit_reason"] = "Overall Stoploss Hitt"
+    #             result[inst]["P&L"] = round(
+    #                 total_investment - total_currunt_close_value, 2
+    #             )
+    #             print("Overall Stoploss Hitt")
+    #         return True
+    #     else:
+    #         return False
 
 
 def get_pnl(
@@ -353,7 +357,9 @@ def get_pnl(
                         float, dataset_mapper[currunt_date][option_type][leg_contract][time]
                     )
                 except KeyError:
-                    print("GOT key error >>>", KeyError)
+                    print(
+                        f"GOT key error >>>\n, {KeyError}, \n, at : {dataset_mapper[currunt_date][option_type][leg_contract][time]}"
+                    )
                     continue
 
                 if (
@@ -407,6 +413,7 @@ def get_pnl(
                             if (
                                 high_price >= target_price
                             ):
+                                print("Individual Target Hit")
                                 result[currunt_date][leg_contract]["exit_time"] = time
                                 result[currunt_date][leg_contract]["exit_price"] = high_price
                                 result[currunt_date][leg_contract]["exit_reason"] = "Individual Target Hit"
@@ -415,6 +422,7 @@ def get_pnl(
                             elif (
                                 low_price <= stoploss_price
                             ):
+                                print("Individual Stoploss Hit")
                                 result[currunt_date][leg_contract]["exit_time"] = time
                                 result[currunt_date][leg_contract]["exit_price"] = low_price
                                 result[currunt_date][leg_contract]["exit_reason"] = "Individual Stoploss Hit"
@@ -441,7 +449,7 @@ def get_pnl(
                                 result[currunt_date][leg_contract]["P&L"] = round(leg_investment - low_price, 2)
                                 break
 
-            # overall
+
             if call_at_once_total_investment:
                 if result[currunt_date][leg_contract]["entry_price"]:
                     total_investment = get_targets(result[currunt_date], contracts)
@@ -498,8 +506,16 @@ def start_backtest():
     for currunt_date in dataset_mapper:
         for i, ent_time in enumerate(entry_time):
             for time, index_prices in dataset_mapper[currunt_date][spot_price_symbol].items():
+                # print("* "*50)
+                # print(index_prices)
+                # print("* "*50)
                 if time == ent_time:
+                    print(dataset_mapper.keys())
+                    # print(dataset_mapper[currunt_date][spot_price_symbol], "XXXXXXXXXXXXXXX")
+                if time == ent_time:
+                    print("time =", time, "T"*5)
                     spot_price = index_prices[0]
+                    print("SPOT_PRICE", spot_price, "* "*10)
                     shift_num = strike[i].replace("ATM", "")
                     if shift_num == "":
                         shift = 0
@@ -520,6 +536,7 @@ def start_backtest():
                         expiries[i]
                     )
                     if contract:
+                        print(contract)
                         contracts.append(contract)
 
     result = get_pnl(
