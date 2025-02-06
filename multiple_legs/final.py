@@ -1,6 +1,5 @@
 from datetime import datetime, timedelta
 import os
-import json
 import time as t
 
 
@@ -18,11 +17,17 @@ def convert_dateformat(date, format, to_format):
     return datetime.strftime(datetime.strptime(date, format).date(), to_format)
 
 
-def write_file(result, fileName, mode):
-    jsondata = json.dumps(result, indent=4)
-    os.makedirs("./outputdata", exist_ok=True)
-    with open(f"./outputdata/{fileName}", mode) as file:
-        file.write(jsondata)
+def write_file(data_obj, file_name:str, output_directory_name:str="output_data", mode:str="w"):
+    try:
+        from json import dumps
+        from os import makedirs
+    except ImportError:
+            raise "make sure you have 'json' and 'os' modules in your environment......"
+    if file_name.endswith(".json"):
+        jsondata = dumps(data_obj, indent=4)
+        makedirs(f"./{output_directory_name}", exist_ok=True)
+        with open(f"./{output_directory_name}/{file_name}", mode) as file:
+            file.write(jsondata)
 
 
 def get_atm(spot_price, strike_list):
@@ -101,11 +106,9 @@ def load_data(paths, spot_price_symbol, index, time_format):
                     }
 
                 option_type = (
-                    "CE"
-                    if symbol.endswith("CE")
-                    else "PE" if symbol.endswith("PE") else spot_price_symbol
+                    "CE" if symbol.endswith("CE") else "PE" if symbol.endswith("PE") else spot_price_symbol
                 )
-                # print(option_type, "C"*50)
+
                 if (
                     option_type != spot_price_symbol
                 ):
@@ -113,20 +116,32 @@ def load_data(paths, spot_price_symbol, index, time_format):
                         symbol not in dataset_mapper[date][option_type]
                     ):
                         dataset_mapper[date][option_type][symbol] = {}
+                        if (
+                            time not in dataset_mapper[date][option_type][symbol]
+                        ):
+                            dataset_mapper[date][option_type][symbol][time] = []
                     dataset_mapper[date][option_type][symbol][time] = prices
                 else:
                     dataset_mapper[date][spot_price_symbol][time] = prices
 
-    # <><><><><><><><><>
-    write_file(dataset_mapper, "1_datset_mapper_check.json", "w")
+                # for i in dataset_mapper[date][spot_price_symbol].keys():
+                #     if time == "10:00:00":
+                #         print("*"*50)
+                #         print(prices) # not changing which i want
+                #         print(time, dataset_mapper[date][spot_price_symbol][time])
+                #         print("*"*50)
+                #         t.sleep(0.5) 
 
-    symbols = [
-        symbol
-        for date in dataset_mapper
-        for typ in ["CE", "PE"]
-        for symbol in dataset_mapper[date][typ]
-    ]
-    for sym in symbols:
+    # <><><><><><><><><>
+    write_file(dataset_mapper, "1_datset_mapper_check.json", "output_data", "w")
+    # <><><><><><><><><>
+
+    call_put_symbols = [symbol for date in dataset_mapper for typ in ["CE", "PE"] for symbol in dataset_mapper[date][typ]]
+
+    # print(call_put_symbols)
+    # assert 5 == 0
+    
+    for sym in call_put_symbols:
         if (
             sym.endswith("CE")
         ):
@@ -154,7 +169,7 @@ def load_data(paths, spot_price_symbol, index, time_format):
             time_format, set(dataset_mapper[date]["PE_DETAILS"]["available_expiries"])
         )
 
-    write_file(dataset_mapper, "dataset_mapper.json", "w")
+    write_file(dataset_mapper, "dataset_mapper.json", "output_data", "w")
 
     return dataset_mapper
 
@@ -472,7 +487,7 @@ def get_pnl(
             if is_sq_off:
                 break
 
-    write_file(result, "final_result.json", mode="w")
+    write_file(result, "final_result.json", "output_data", mode="w")
 
     return result
 
@@ -535,8 +550,8 @@ def start_backtest():
                         shift,
                         expiries[i]
                     )
+                    print(contract, "*"*20)
                     if contract:
-                        print(contract)
                         contracts.append(contract)
 
     result = get_pnl(
@@ -552,7 +567,7 @@ def start_backtest():
         overall_stop_loss
     )
 
-    write_file(result, "final_result.json", "w")
+    write_file(result, "final_result.json", "output_data", "w")
 
     # print(result)
 
