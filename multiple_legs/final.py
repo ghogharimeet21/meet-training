@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 import os
+import json
 import time as t
 
 
@@ -18,23 +19,19 @@ def convert_dateformat(date, format, to_format):
 
 
 def write_file(data_obj, file_name:str, output_directory_name:str="output_data", mode:str="w"):
-    try:
-        from json import dumps
-        from os import makedirs
-    except ImportError:
-            raise "make sure you have 'json' and 'os' modules in your environment......"
     if file_name.endswith(".json"):
-        jsondata = dumps(data_obj, indent=4)
-        makedirs(f"./{output_directory_name}", exist_ok=True)
+        jsondata = json.dumps(data_obj, indent=4)
+        os.makedirs(f"./{output_directory_name}", exist_ok=True)
         with open(f"./{output_directory_name}/{file_name}", mode) as file:
             file.write(jsondata)
 
 
 def get_atm(spot_price, strike_list):
+    # print(strike_list, "^"*50)
     return min(strike_list, key=lambda x: abs(float(x) - spot_price))
 
 
-def get_available_dates(date_range: list, date_format: str):
+def get_available_dates_in_range(date_range: list, date_format: str):
     if (
         len(date_range) > 2
     ):
@@ -72,102 +69,180 @@ def sort_dates(date_format: str, date_list: list):
     ]
 
 
-def load_data(paths, spot_price_symbol, index, time_format):
+def load_data(paths, spot_price_symbol, index, exp_date_format) -> dict:
+
+    
     dataset_mapper = {}
     for path in paths:
-        if (
-            not os.path.exists(path)
-        ):
-            print(f"this path '{path}' is not exist")
+        if not os.path.exists(path):
             continue
+
         with open(path, "r") as file:
             lines = file.readlines()
-            # ['', 'Symbol', 'Date', 'Time', 'Open', 'High', 'Low', 'Close', 'Volume', 'Open Interest', 'TickTime', '', '\n']
+            header = lines[0].strip().split(",")
+            # ['', 'Symbol', 'Date', 'Time', 'Open', 'High', 'Low', 'Close', 'Volume', 'Open Interest', 'TickTime', '', '']
+
+            
             for line in lines[1:]:
+
                 values = line.strip().split(",")
-                symbol, date, time = values[1], values[2], values[3]
-                prices = values[4:8]
 
-                if (
-                    date not in dataset_mapper
-                ):
-                    dataset_mapper[date] = {
-                        "CE": {},
-                        "PE": {},
-                        spot_price_symbol: {},
-                        "CE_DETAILS": {
-                            "available_strikes": [],
-                            "available_expiries": [],
-                        },
-                        "PE_DETAILS": {
-                            "available_strikes": [],
-                            "available_expiries": [],
-                        },
-                    }
+                symbol = values[1]
+                date = values[2]
+                time = values[3]
+                open_price = values[4]
+                high_price = values[5]
+                low_price = values[6]
+                close_price = values[7]
 
-                option_type = (
-                    "CE" if symbol.endswith("CE") else "PE" if symbol.endswith("PE") else spot_price_symbol
-                )
+                if values[1][-2:] == "CE":
+                    
 
-                if (
-                    option_type != spot_price_symbol
-                ):
-                    if (
-                        symbol not in dataset_mapper[date][option_type]
-                    ):
-                        dataset_mapper[date][option_type][symbol] = {}
-                        if (
-                            time not in dataset_mapper[date][option_type][symbol]
-                        ):
-                            dataset_mapper[date][option_type][symbol][time] = []
-                    dataset_mapper[date][option_type][symbol][time] = prices
-                else:
-                    dataset_mapper[date][spot_price_symbol][time] = prices
+                    # initialized the if not available in the mapper
+                    if date not in dataset_mapper:
+                        dataset_mapper[date] = {
+                            "PE":{},
+                            "PE_DETAILS":{
+                                "available_strikes":[],
+                                "available_expiries":[]
+                            },
+                            "CE":{},
+                            "CE_DETAILS":{
+                                "available_strikes":[],
+                                "available_expiries":[]
+                            },
+                            f"{spot_price_symbol}":{}
+                        }
+                    # Intialize symbol.
+                    if symbol not in dataset_mapper[date]["CE"]:
+                        dataset_mapper[date]["CE"][symbol] = {}
+                    
+                    # initialize time
+                    if time not in dataset_mapper[date]["CE"][symbol]:
+                        dataset_mapper[date]["CE"][symbol][time] = []
 
-                # for i in dataset_mapper[date][spot_price_symbol].keys():
-                #     if time == "10:00:00":
-                #         print("*"*50)
-                #         print(prices) # not changing which i want
-                #         print(time, dataset_mapper[date][spot_price_symbol][time])
-                #         print("*"*50)
-                #         t.sleep(0.5) 
+                    dataset_mapper[date]["CE"][symbol][time] = [
+                        open_price,
+                        high_price,
+                        low_price,
+                        close_price,
+                    ]
 
-    # <><><><><><><><><>
-    write_file(dataset_mapper, "1_datset_mapper_check.json", "output_data", "w")
-    # <><><><><><><><><>
+                elif values[1][-2:] == "PE":
+                    # initialized the if not available in the mapper
+                    if date not in dataset_mapper:
+                        dataset_mapper[date] = {
+                            "PE":{},
+                            "PE_DETAILS":{
+                                "available_strikes":[],
+                                "available_expiries":[]
+                            },
+                            "CE":{},
+                            "CE_DETAILS":{
+                                "available_strikes":[],
+                                "available_expiries":[]
+                            },
+                            f"{spot_price_symbol}":{}
+                        }
+                    # Intialize symbol.
+                    if symbol not in dataset_mapper[date]["PE"]:
+                        dataset_mapper[date]["PE"][symbol] = {}
+                    
 
-    call_put_symbols = [symbol for date in dataset_mapper for typ in ["CE", "PE"] for symbol in dataset_mapper[date][typ]]
+                    # initialize time
+                    if time not in dataset_mapper[date]["PE"][symbol]:
+                        dataset_mapper[date]["PE"][symbol][time] = []
 
-    # print(call_put_symbols)
-    # assert 5 == 0
-    
-    for sym in call_put_symbols:
-        if (
-            sym.endswith("CE")
-        ):
+                    dataset_mapper[date]["PE"][symbol][time] = [
+                        open_price,
+                        high_price,
+                        low_price,
+                        close_price,
+                    ]
+
+                elif values[1] == spot_price_symbol:
+                    # initialized the if not available in the mapper
+                    if date not in dataset_mapper:
+                        dataset_mapper[date] = {
+                            "PE":{},
+                            "PE_DETAILS":{
+                                "available_strikes":[],
+                                "available_expiries":[]
+                            },
+                            "CE":{},
+                            "CE_DETAILS":{
+                                "available_strikes":[],
+                                "available_expiries":[]
+                            },
+                            f"{spot_price_symbol}":{}
+                        }
+                    # Intialize symbol.
+                    if spot_price_symbol not in dataset_mapper[date]:
+                        dataset_mapper[date][spot_price_symbol] = {}
+                    
+
+                    # initialize time
+                    if time not in dataset_mapper[date][symbol]:
+                        dataset_mapper[date][symbol][time] = []
+                    
+                    dataset_mapper[date][symbol][time] = [open_price,high_price, low_price, close_price]
+            
+                    if time not in dataset_mapper[date]:
+                        dataset_mapper[date][symbol][time] = []
+
+                    dataset_mapper[date][symbol][time] = [
+                        open_price,
+                        high_price,
+                        low_price,
+                        close_price,
+                    ]
+
+    symbols = []
+    for date in dataset_mapper:
+        for segment in dataset_mapper[date]:
+            for symbol in dataset_mapper[date][segment]:
+                symbols.append(symbol)
+
+    CE_exps = []
+    PE_exps = []
+    CE_strikes = []
+    PE_strikes = []
+    for sym in symbols:
+        if sym[-2:] == "CE":
             strike, expiry = get_strike_expiry(sym, index, "CE")
-            dataset_mapper[date]["CE_DETAILS"]["available_strikes"].append(strike)
-            dataset_mapper[date]["CE_DETAILS"]["available_expiries"].append(expiry)
-        elif (
-            sym.endswith("PE")
-        ):
+            if expiry not in CE_exps:
+                CE_exps.append(expiry)
+            if strike not in CE_strikes:
+                CE_strikes.append(strike)
+
+        elif sym[-2:] == "PE":
             strike, expiry = get_strike_expiry(sym, index, "PE")
-            dataset_mapper[date]["PE_DETAILS"]["available_strikes"].append(strike)
-            dataset_mapper[date]["PE_DETAILS"]["available_expiries"].append(expiry)
+            if expiry not in PE_exps:
+                PE_exps.append(expiry)
+            if strike not in PE_strikes:
+                PE_strikes.append(strike)
+
+
+    sorted_PE_exps = sort_dates(date_format=exp_date_format, date_list=PE_exps)
+    sorted_PE_strikes = sorted(PE_strikes)
+
+    sorted_CE_exps = sort_dates(date_format=exp_date_format, date_list=CE_exps)
+    sorted_CE_strikes = sorted(CE_strikes)
 
     for date in dataset_mapper:
-        dataset_mapper[date]["CE_DETAILS"]["available_strikes"] = sorted(
-            set(dataset_mapper[date]["CE_DETAILS"]["available_strikes"])
-        )
-        dataset_mapper[date]["CE_DETAILS"]["available_expiries"] = sort_dates(
-            time_format, set(dataset_mapper[date]["CE_DETAILS"]["available_expiries"])
-        )
-        dataset_mapper[date]["PE_DETAILS"]["available_strikes"] = sorted(
-            set(dataset_mapper[date]["PE_DETAILS"]["available_strikes"])
-        )
-        dataset_mapper[date]["PE_DETAILS"]["available_expiries"] = sort_dates(
-            time_format, set(dataset_mapper[date]["PE_DETAILS"]["available_expiries"])
-        )
+        for row in dataset_mapper[date]:
+            if row == "PE_DETAILS":
+                for elm in dataset_mapper[date][row]:
+                    if elm == "available_strikes":
+                        dataset_mapper[date][row][elm] = sorted_PE_strikes
+                    elif elm == "available_expiries":
+                        dataset_mapper[date][row][elm] = sorted_PE_exps
+            elif row == "CE_DETAILS":
+                for elm in dataset_mapper[date][row]:
+                    if elm == "available_strikes":
+                        dataset_mapper[date][row][elm] = sorted_CE_strikes
+                    elif elm == "available_expiries":
+                        dataset_mapper[date][row][elm] = sorted_CE_exps
 
     write_file(dataset_mapper, "dataset_mapper.json", "output_data", "w")
 
@@ -235,37 +310,38 @@ def check_overall_sl_tgt(
     overall_stoploss,
     time,
 ):
-    
     total_currunt_value = 0
-    for inst in contracts:
+    for leg in contracts:
         if (
-            result[inst]["exit_price"] is not None
+            result[leg]["exit_price"] is not None
         ):
-            total_currunt_value += result[inst]["exit_price"]
-            print(result[inst]["exit_price"], "*"*50, time) ##<<<<<<<<<<< first leg exit
+            print("already exited leg", leg, "X "*50)
+            print("already exited leg", result[leg]["exit_reason"], result[leg]["exit_time"], "R "*50)
+            total_currunt_value += result[leg]["exit_price"]
         else:
-            total_currunt_value += result[inst]["currunt_close_price"]
-        print("else "*5, total_currunt_value, time, inst)
+            print(f"inidividual doesn't at contracts {leg}", "D "*10, time)
+            total_currunt_value += result[leg]["currunt_close_price"]
     chnage_in_investment = total_currunt_value - total_investment
-
 
     if (
         chnage_in_investment >= overall_target
     ):
-        # print(time, "chnage in investment =", chnage_in_investment, ">=", "overall_target =", overall_target)
-        for inst in contracts:
-            result[inst]["exit_price"] = result[inst]["currunt_close_price"]
-            result[inst]["exit_reason"] = "Overall Target Hitt"
-            result[inst]["exit_time"] = time
+        for leg in contracts:
+            if result[leg]["exit_price"] is None:
+                result[leg]["exit_price"] = result[leg]["currunt_close_price"]
+                result[leg]["exit_reason"] = "Overall Target Hitt"
+                result[leg]["exit_time"] = time
+                result[leg]["P&L"] = result[leg]["entry_price"] - result[leg]["exit_price"]
         return True
     elif (
         chnage_in_investment <= overall_stoploss
     ):
-        # print(time, "chnage in investment =", chnage_in_investment, "<=", "overall_stoploss =", overall_stoploss)
-        for inst in contracts:
-            result[inst]["exit_price"] = result[inst]["currunt_close_price"]
-            result[inst]["exit_reason"] = "Overall Stoploss Hitt"
-            result[inst]["exit_time"] = time
+        for leg in contracts:
+            if result[leg]["exit_price"] is None:
+                result[leg]["exit_price"] = result[leg]["currunt_close_price"]
+                result[leg]["exit_reason"] = "Overall Stoploss Hitt"
+                result[leg]["exit_time"] = time
+                result[leg]["P&L"] = result[leg]["entry_price"] - result[leg]["exit_price"]
         return True
     else:
         return False
@@ -357,7 +433,7 @@ def get_pnl(
             for i, leg_entry_time in enumerate(entry_times):
                 leg_exit_time = exit_times[i]
                 leg_contract = contracts[i]
-                action = tread_actions[i]
+                leg_action = tread_actions[i]
                 target = targetList[i]
                 stoploss = stoplossList[i]
                 option_type = leg_contract[-2:]
@@ -365,6 +441,7 @@ def get_pnl(
                 if (
                     leg_contract not in dataset_mapper[currunt_date][option_type]
                 ):
+                    print(f"this contract '{leg_contract}' not avilable")
                     continue
 
                 try:
@@ -387,11 +464,11 @@ def get_pnl(
                         "entry_price": open_price,
                         "exit_price": None,
                         "exit_reason": None,
-                        "target_price": round(open_price + target, 2) if action == "BUY" else round(open_price - target, 2),
-                        "stoploss_price": round(open_price - stoploss, 2) if action == "BUY" else round(open_price + stoploss, 2),
+                        "target_price": round(open_price + target, 2) if leg_action.upper() == "BUY" else (round(open_price - target, 2) if leg_action.upper() == "SELL" else print(f"'{leg_action}' invalid Input please enter 'BUY' or 'SELL' !"), exit()),
+                        "stoploss_price": round(open_price - stoploss, 2) if leg_action.upper() == "BUY" else (round(open_price + stoploss, 2) if leg_action.upper() == "SELL" else print(f"'{leg_action}' invalid Input please enter 'BUY' or 'SELL' !"), exit()),
                         "P&L": None,
                         "currunt_close_price": close_price,
-                        "action": action
+                        "action": leg_action
                     }
 
                 elif (
@@ -405,7 +482,7 @@ def get_pnl(
                         result[currunt_date][leg_contract]["exit_reason"] = "Normal Exit"
                         result[currunt_date][leg_contract]["P&L"] = (
                             round(result[currunt_date][leg_contract]["entry_price"] - close_price, 2)
-                            if action == "BUY"
+                            if leg_action == "BUY"
                             else
                             round(close_price - result[currunt_date][leg_contract]["entry_price"], 2)
                         )
@@ -423,7 +500,7 @@ def get_pnl(
                         target_price = result[currunt_date][leg_contract]["target_price"]
                         stoploss_price = result[currunt_date][leg_contract]["stoploss_price"]
                         if (
-                            action == "BUY"
+                            leg_action == "BUY"
                         ):
                             if (
                                 high_price >= target_price
@@ -445,7 +522,7 @@ def get_pnl(
                                 break
                             
                         
-                        elif action == "SELL":
+                        elif leg_action == "SELL":
                             if (
                                 high_price >= stoploss_price
                             ):
@@ -472,8 +549,8 @@ def get_pnl(
                     result[currunt_date]["total_investment"] = total_investment
 
             
-            # if result[currunt_date][leg_contract]["exit_price"] is not None:
-            #     continue
+            if result[currunt_date][leg_contract]["exit_price"] is None:
+                continue
             is_sq_off = check_overall_sl_tgt(
                 result[currunt_date],
                 contracts,
@@ -484,53 +561,54 @@ def get_pnl(
             )
 
 
+
             if is_sq_off:
                 break
 
-    write_file(result, "final_result.json", "output_data", mode="w")
-
     return result
 
+index_derivatives_contracts = {
+    "nifty50": 75,
+    "banknifty": 30,
+    "niftymidcapselect": 120,
+    "niftyfinancialservices": 65,
+    "niftynext50": 25,
+    "bsesensex": 20,
+    "bsebankex": 30,
+    "bsesensex50": 60
+}
 
 
+spot_price_symbol = "NIFTY-I"
+index = "NIFTY"
+date_range = ["08032023", "10032023"]
+entry_time = ["11:00:00", "11:00:00"]
+exit_time = ["13:30:00", "13:30:00"]
+overall_target = 50
+overall_stop_loss = 25
+targets = [10, 10]
+stop_loses = [4, 4]
+tread_actions = ["BUY", "BUY"]
+option_type = ["CE", "PE"]
+strike = ["ATM", "ATM+1"]
+expiries = ["weekly", "monthly"]
+
+FILE_DATE_FORMAT = "%d%m%Y"
+ROW_EXPIRY_TIME_FORMAT = "%d%b%y"
+TIME_FORMAT = "%H:%M:%S"
 
 def start_backtest():
-    spot_price_symbol = "NIFTY-I"
-    index = "NIFTY"
-    date_range = ["08032023", "10032023"]
-    entry_time = ["10:00:00", "10:00:00"]
-    exit_time = ["13:30:00", "13:30:00"]
-    overall_target = 50
-    overall_stop_loss = 25
-    targets = [10, 10]
-    stop_loses = [4, 4]
-    tread_actions = ["BUY", "BUY"]
-    option_type = ["CE", "PE"]
-    strike = ["ATM", "ATM+1"]
-    expiries = ["weekly", "weekly"]
-
-    FILE_DATE_FORMAT = "%d%m%Y"
-    ROW_EXPIRY_TIME_FORMAT = "%d%b%y"
-    TIME_FORMAT = "%H:%M:%S"
-
-    dates = get_available_dates(date_range, FILE_DATE_FORMAT)
+    dates = get_available_dates_in_range(date_range, FILE_DATE_FORMAT)
     paths = get_all_dataset_paths("dataset", dates)
     dataset_mapper = load_data(paths, spot_price_symbol, index, ROW_EXPIRY_TIME_FORMAT)
+
 
     contracts = []
     for currunt_date in dataset_mapper:
         for i, ent_time in enumerate(entry_time):
             for time, index_prices in dataset_mapper[currunt_date][spot_price_symbol].items():
-                # print("* "*50)
-                # print(index_prices)
-                # print("* "*50)
                 if time == ent_time:
-                    print(dataset_mapper.keys())
-                    # print(dataset_mapper[currunt_date][spot_price_symbol], "XXXXXXXXXXXXXXX")
-                if time == ent_time:
-                    print("time =", time, "T"*5)
                     spot_price = index_prices[0]
-                    print("SPOT_PRICE", spot_price, "* "*10)
                     shift_num = strike[i].replace("ATM", "")
                     if shift_num == "":
                         shift = 0
@@ -550,7 +628,6 @@ def start_backtest():
                         shift,
                         expiries[i]
                     )
-                    print(contract, "*"*20)
                     if contract:
                         contracts.append(contract)
 
@@ -569,7 +646,7 @@ def start_backtest():
 
     write_file(result, "final_result.json", "output_data", "w")
 
-    # print(result)
+    print(result)
 
 
 

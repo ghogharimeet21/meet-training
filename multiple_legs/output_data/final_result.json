@@ -1,31 +1,31 @@
 {
     "3/8/2023": {
-        "NIFTY09MAR2317900CE": {
+        "NIFTY09MAR2317750CE": {
             "entry_date": "3/8/2023",
-            "entry_time": "10:00:00",
-            "exit_time": "10:00:00",
-            "entry_price": 4.55,
-            "exit_price": 4.6,
-            "exit_reason": "Overall Stoploss Hitt",
-            "target_price": 14.55,
-            "stoploss_price": 0.55,
-            "P&L": null,
-            "currunt_close_price": 4.6,
+            "entry_time": "11:00:00",
+            "exit_time": "11:05:00",
+            "entry_price": 30.95,
+            "exit_price": 25.95,
+            "exit_reason": "Individual Stoploss Hit",
+            "target_price": 40.95,
+            "stoploss_price": 26.95,
+            "P&L": -5.0,
+            "currunt_close_price": 25.95,
             "action": "BUY"
         },
-        "NIFTY09MAR2317950PE": {
+        "NIFTY29MAR2317800PE": {
             "entry_date": "3/8/2023",
-            "entry_time": "10:00:00",
-            "exit_time": "10:00:00",
-            "entry_price": 273.65,
-            "exit_price": 271.85,
+            "entry_time": "11:00:00",
+            "exit_time": "11:05:00",
+            "entry_price": 219.95,
+            "exit_price": 220.6,
             "exit_reason": "Overall Stoploss Hitt",
-            "target_price": 283.65,
-            "stoploss_price": 269.65,
-            "P&L": null,
-            "currunt_close_price": 271.85,
+            "target_price": 229.95,
+            "stoploss_price": 215.95,
+            "P&L": -0.6500000000000057,
+            "currunt_close_price": 220.6,
             "action": "BUY"
         },
-        "total_investment": 278.2
+        "total_investment": 250.89999999999998
     }
 }

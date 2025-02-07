@@ -58,78 +58,6 @@ def sort_dates(date_format: str, date_list: list):
     ]
 
 
-def load_data(paths, spot_price_symbol, index):
-    dataset_mapper = {}
-    for path in paths:
-        if not os.path.exists(path):
-            continue
-        with open(path, "r") as file:
-            lines = file.readlines()
-            for line in lines[1:]:
-                values = line.strip().split(",")
-                symbol, date, time = values[1], values[2], values[3]
-                prices = values[4:8]
-
-                if date not in dataset_mapper:
-                    dataset_mapper[date] = {
-                        "CE": {},
-                        "PE": {},
-                        spot_price_symbol: {},
-                        "CE_DETAILS": {
-                            "available_strikes": [],
-                            "available_expiries": [],
-                        },
-                        "PE_DETAILS": {
-                            "available_strikes": [],
-                            "available_expiries": [],
-                        },
-                    }
-
-                option_type = (
-                    "CE"
-                    if symbol.endswith("CE")
-                    else "PE" if symbol.endswith("PE") else spot_price_symbol
-                )
-                if option_type != spot_price_symbol:
-                    if symbol not in dataset_mapper[date][option_type]:
-                        dataset_mapper[date][option_type][symbol] = {}
-                    dataset_mapper[date][option_type][symbol][time] = prices
-                else:
-                    dataset_mapper[date][spot_price_symbol][time] = prices
-
-    symbols = [
-        symbol
-        for date in dataset_mapper
-        for typ in ["CE", "PE"]
-        for symbol in dataset_mapper[date][typ]
-    ]
-    for sym in symbols:
-        if sym.endswith("CE"):
-            strike, expiry = get_strike_expiry(sym, index, "CE")
-            dataset_mapper[date]["CE_DETAILS"]["available_strikes"].append(strike)
-            dataset_mapper[date]["CE_DETAILS"]["available_expiries"].append(expiry)
-        elif sym.endswith("PE"):
-            strike, expiry = get_strike_expiry(sym, index, "PE")
-            dataset_mapper[date]["PE_DETAILS"]["available_strikes"].append(strike)
-            dataset_mapper[date]["PE_DETAILS"]["available_expiries"].append(expiry)
-
-    for date in dataset_mapper:
-        dataset_mapper[date]["CE_DETAILS"]["available_strikes"] = sorted(
-            set(dataset_mapper[date]["CE_DETAILS"]["available_strikes"])
-        )
-        dataset_mapper[date]["CE_DETAILS"]["available_expiries"] = sort_dates(
-            "%d%b%y", set(dataset_mapper[date]["CE_DETAILS"]["available_expiries"])
-        )
-        dataset_mapper[date]["PE_DETAILS"]["available_strikes"] = sorted(
-            set(dataset_mapper[date]["PE_DETAILS"]["available_strikes"])
-        )
-        dataset_mapper[date]["PE_DETAILS"]["available_expiries"] = sort_dates(
-            "%d%b%y", set(dataset_mapper[date]["PE_DETAILS"]["available_expiries"])
-        )
-
-    write_in_jsonFile(dataset_mapper, "dataset_mapper.json")
-
-    return dataset_mapper
 
 
 def get_monthly_expiry(date_list, date_format="%d%b%y"):
@@ -304,7 +232,7 @@ def get_pNl(
         result[currunt_date] = {}
         for time in time_range:
             for i, leg_entry_time in enumerate(entry_time):
-                contract = contracts[i]
+                contract = contracts[i] 
                 option_type = contract[-2:]
 
                 if contract not in dataset_mapper[currunt_date][option_type]:
