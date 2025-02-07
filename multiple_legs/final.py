@@ -315,11 +315,8 @@ def check_overall_sl_tgt(
         if (
             result[leg]["exit_price"] is not None
         ):
-            print("already exited leg", leg, "X "*50)
-            print("already exited leg", result[leg]["exit_reason"], result[leg]["exit_time"], "R "*50)
             total_currunt_value += result[leg]["exit_price"]
         else:
-            print(f"inidividual doesn't at contracts {leg}", "D "*10, time)
             total_currunt_value += result[leg]["currunt_close_price"]
     chnage_in_investment = total_currunt_value - total_investment
 
@@ -414,7 +411,8 @@ def get_pnl(
     targetList:list,
     stoplossList:list,
     overall_target:int,
-    overall_stoploss:int
+    overall_stoploss:int,
+    index_derivatives_contracts:dict
 ):
     result = {}
 
@@ -514,7 +512,6 @@ def get_pnl(
                             elif (
                                 low_price <= stoploss_price
                             ):
-                                print("Individual Stoploss Hit")
                                 result[currunt_date][leg_contract]["exit_time"] = time
                                 result[currunt_date][leg_contract]["exit_price"] = low_price
                                 result[currunt_date][leg_contract]["exit_reason"] = "Individual Stoploss Hit"
@@ -560,15 +557,15 @@ def get_pnl(
                 time,
             )
 
-
-
             if is_sq_off:
                 break
+    
+    
 
     return result
 
 index_derivatives_contracts = {
-    "nifty50": 75,
+    "nifty": 75,
     "banknifty": 30,
     "niftymidcapselect": 120,
     "niftyfinancialservices": 65,
@@ -641,12 +638,11 @@ def start_backtest():
         targets,
         stop_loses,
         overall_target,
-        overall_stop_loss
+        overall_stop_loss,
+        index_derivatives_contracts,
     )
 
     write_file(result, "final_result.json", "output_data", "w")
-
-    print(result)
 
 
 
