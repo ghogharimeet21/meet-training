@@ -400,6 +400,20 @@ def check_overall_sl_tgt(
     #     else:
     #         return False
 
+def calculate_lot_size(index_derivatives_contracts: dict, result:dict, index: str, lot_size: list):
+    for symbol in index_derivatives_contracts:
+        lot = int(index_derivatives_contracts[symbol])
+        if symbol.upper() == index.upper():
+            for date in result:
+                for i, contract in enumerate(result[date]):
+                    result[date][contract]["lot_size"] = lot_size[i]
+                    result[date][contract]["entry_price"] *= (lot * lot_size[i])
+                    result[date][contract]["exit_price"] *= (lot * lot_size[i])
+                    result[date][contract]["target_price"] *= (lot * lot_size[i])
+                    result[date][contract]["stoploss_price"] *= (lot * lot_size[i])
+                    result[date][contract]["P&L"] *= (lot * lot_size[i])
+                    result[date][contract]["currunt_close_price"] *= (lot * lot_size[i])
+
 
 def get_pnl(
     time_format:str,
@@ -412,7 +426,6 @@ def get_pnl(
     stoplossList:list,
     overall_target:int,
     overall_stoploss:int,
-    index_derivatives_contracts:dict
 ):
     result = {}
 
@@ -457,6 +470,7 @@ def get_pnl(
                 ):
                     result[currunt_date][leg_contract] = {
                         "entry_date": currunt_date,
+                        "lot_size": None,
                         "entry_time": time,
                         "exit_time": None,
                         "entry_price": open_price,
@@ -543,7 +557,6 @@ def get_pnl(
                 if result[currunt_date][leg_contract]["entry_price"]:
                     total_investment = get_targets(result[currunt_date], contracts)
                     call_at_once_total_investment = False
-                    result[currunt_date]["total_investment"] = total_investment
 
             
             if result[currunt_date][leg_contract]["exit_price"] is None:
@@ -560,7 +573,7 @@ def get_pnl(
             if is_sq_off:
                 break
     
-    
+
 
     return result
 
@@ -579,7 +592,8 @@ index_derivatives_contracts = {
 spot_price_symbol = "NIFTY-I"
 index = "NIFTY"
 date_range = ["08032023", "10032023"]
-entry_time = ["11:00:00", "11:00:00"]
+lot_size = [10, 15]
+entry_time = ["10:00:00", "10:00:00"]
 exit_time = ["13:30:00", "13:30:00"]
 overall_target = 50
 overall_stop_loss = 25
@@ -639,8 +653,9 @@ def start_backtest():
         stop_loses,
         overall_target,
         overall_stop_loss,
-        index_derivatives_contracts,
     )
+
+    calculate_lot_size(index_derivatives_contracts, result, index, lot_size)
 
     write_file(result, "final_result.json", "output_data", "w")
 
