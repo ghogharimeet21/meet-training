@@ -82,12 +82,11 @@ def load_data(paths, spot_price_symbol, index, exp_date_format) -> dict:
             header = lines[0].strip().split(",")
             # ['', 'Symbol', 'Date', 'Time', 'Open', 'High', 'Low', 'Close', 'Volume', 'Open Interest', 'TickTime', '', '']
 
-            
             for line in lines[1:]:
-
                 values = line.strip().split(",")
 
                 symbol = values[1]
+                option = symbol[-2:]
                 date = values[2]
                 time = values[3]
                 open_price = values[4]
@@ -95,9 +94,7 @@ def load_data(paths, spot_price_symbol, index, exp_date_format) -> dict:
                 low_price = values[6]
                 close_price = values[7]
 
-                if values[1][-2:] == "CE":
-                    
-
+                if option == "CE":
                     # initialized the if not available in the mapper
                     if date not in dataset_mapper:
                         dataset_mapper[date] = {
@@ -128,7 +125,7 @@ def load_data(paths, spot_price_symbol, index, exp_date_format) -> dict:
                         close_price,
                     ]
 
-                elif values[1][-2:] == "PE":
+                elif option == "PE":
                     # initialized the if not available in the mapper
                     if date not in dataset_mapper:
                         dataset_mapper[date] = {
@@ -160,7 +157,7 @@ def load_data(paths, spot_price_symbol, index, exp_date_format) -> dict:
                         close_price,
                     ]
 
-                elif values[1] == spot_price_symbol:
+                elif symbol == spot_price_symbol:
                     # initialized the if not available in the mapper
                     if date not in dataset_mapper:
                         dataset_mapper[date] = {
@@ -406,13 +403,14 @@ def calculate_lot_size(index_derivatives_contracts: dict, result:dict, index: st
         if symbol.upper() == index.upper():
             for date in result:
                 for i, contract in enumerate(result[date]):
+                    total_shears = (lot * lot_size[i])
                     result[date][contract]["lot_size"] = lot_size[i]
-                    result[date][contract]["entry_price"] *= (lot * lot_size[i])
-                    result[date][contract]["exit_price"] *= (lot * lot_size[i])
-                    result[date][contract]["target_price"] *= (lot * lot_size[i])
-                    result[date][contract]["stoploss_price"] *= (lot * lot_size[i])
-                    result[date][contract]["P&L"] *= (lot * lot_size[i])
-                    result[date][contract]["currunt_close_price"] *= (lot * lot_size[i])
+                    result[date][contract]["entry_price"] *= total_shears
+                    result[date][contract]["exit_price"] *= total_shears
+                    result[date][contract]["target_price"] *= total_shears
+                    result[date][contract]["stoploss_price"] *= total_shears
+                    result[date][contract]["P&L"] *= total_shears
+                    result[date][contract]["currunt_close_price"] *= total_shears
 
 
 def get_pnl(
@@ -552,11 +550,13 @@ def get_pnl(
                                 result[currunt_date][leg_contract]["P&L"] = round(leg_investment - low_price, 2)
                                 break
 
-
-            if call_at_once_total_investment:
-                if result[currunt_date][leg_contract]["entry_price"]:
-                    total_investment = get_targets(result[currunt_date], contracts)
-                    call_at_once_total_investment = False
+            try:
+                if call_at_once_total_investment:
+                    if result[currunt_date][leg_contract]["entry_price"]:
+                        total_investment = get_targets(result[currunt_date], contracts)
+                        call_at_once_total_investment = False
+            except KeyError:
+                continue
 
             
             if result[currunt_date][leg_contract]["exit_price"] is None:
